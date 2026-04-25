@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redistribución de Procesos — Vinatea & Toyama</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0D1F3C;
+  --navy-mid:#1A325A;
+  --gold:#C49A3C;
+  --gold-light:#E8C96A;
+  --cream:#F8F5EE;
+  --cream-dark:#F0EDE4;
+  --text:#1A1A1A;
+  --muted:#6B6B6B;
+  --border:#D4C9B0;
+  --red-soft:#A83232;
+  --white:#fff;
+}
+html,body{min-height:100%;background:var(--cream);font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;color:var(--text)}
+
+/* NAV */
+.top-nav{background:var(--navy);display:flex;align-items:stretch;padding:0 2.5rem;position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(196,154,60,0.3)}
+.nav-brand{display:flex;flex-direction:column;justify-content:center;padding:1rem 0;margin-right:2.5rem;border-right:0.5px solid rgba(255,255,255,0.12);padding-right:2rem}
+.nav-firm{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:500}
+.nav-title{font-size:12px;color:rgba(255,255,255,0.7);margin-top:2px;white-space:nowrap}
+.tabs{display:flex;gap:0;align-items:stretch}
+.tab-btn{padding:0 1.5rem;font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:500;color:rgba(255,255,255,0.5);background:none;border:none;cursor:pointer;border-bottom:3px solid transparent;transition:all 0.2s;letter-spacing:0.3px;white-space:nowrap}
+.tab-btn:hover{color:rgba(255,255,255,0.85)}
+.tab-btn.active{color:var(--gold-light);border-bottom-color:var(--gold)}
+.nav-date{margin-left:auto;display:flex;align-items:center;font-size:10px;color:rgba(255,255,255,0.35);letter-spacing:1px;text-transform:uppercase}
+
+/* PANELS */
+.panel{display:none;max-width:900px;margin:0 auto;padding:2.5rem 2rem 4rem}
+.panel.active{display:block}
+
+/* PAGE HEADER */
+.page-header{background:var(--navy);border-radius:8px;padding:2.5rem;margin-bottom:2rem;position:relative;overflow:hidden}
+.page-header::before{content:'';position:absolute;right:-60px;top:-60px;width:240px;height:240px;border-radius:50%;border:50px solid rgba(196,154,60,0.09)}
+.page-header::after{content:'';position:absolute;right:60px;bottom:-80px;width:140px;height:140px;border-radius:50%;border:35px solid rgba(196,154,60,0.06)}
+.ph-tag{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:500}
+.ph-h1{font-family:'Georgia','Times New Roman',serif;font-size:26px;color:#fff;font-weight:600;line-height:1.25;margin-bottom:6px}
+.ph-sub{font-size:12px;color:rgba(255,255,255,0.5);letter-spacing:0.3px}
+.badges{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
+.badge{background:rgba(196,154,60,0.15);border:0.5px solid rgba(196,154,60,0.4);color:var(--gold-light);font-size:11px;padding:4px 12px;border-radius:20px;font-weight:500}
+
+/* KPIs */
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:0.5px solid var(--border);border-radius:6px;overflow:hidden;margin-bottom:2rem}
+.kpi-grid-3{grid-template-columns:repeat(3,1fr)}
+.kpi{background:var(--white);padding:16px 18px;text-align:center}
+.kpi-num{font-family:'Georgia','Times New Roman',serif;font-size:28px;font-weight:600;color:var(--navy);line-height:1}
+.kpi-lbl{font-size:10px;color:var(--muted);margin-top:5px;text-transform:uppercase;letter-spacing:1px}
+.kpi-sub{font-size:10px;color:var(--gold);margin-top:3px;font-weight:500}
+
+/* SECTIONS */
+.section{background:var(--white);border:0.5px solid var(--border);border-radius:8px;padding:1.5rem;margin-bottom:1.25rem}
+.section-label{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:14px}
+.section-title{font-family:'Georgia','Times New Roman',serif;font-size:17px;color:var(--navy);margin-bottom:4px;font-weight:600}
+.section-date{font-size:11px;color:var(--muted)}
+
+/* PHASES */
+.phase{display:flex;gap:14px;margin-bottom:12px;padding:14px;border:0.5px solid var(--border);border-radius:6px;background:var(--cream)}
+.phase:last-child{margin-bottom:0}
+.phase-num{width:28px;height:28px;min-width:28px;border-radius:50%;background:var(--navy);color:var(--gold-light);font-size:12px;font-weight:500;display:flex;align-items:center;justify-content:center;font-family:'Georgia','Times New Roman',serif;margin-top:1px}
+.phase-num.gold{background:var(--gold);color:var(--navy)}
+.phase-title{font-size:13px;font-weight:500;color:var(--navy);margin-bottom:4px}
+.phase-desc{font-size:12px;color:var(--muted);line-height:1.6}
+.phase-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.tag{font-size:10px;padding:2px 9px;border-radius:2px;border:0.5px solid}
+.tag.blue{background:#EBF0F8;border-color:#B0C3E0;color:#1A3A6B}
+.tag.amber{background:#FBF3E0;border-color:#DFC07A;color:#7A5A0D}
+.tag.green{background:#EBF5EE;border-color:#A0C8AE;color:#1A5930}
+.tag.red{background:#F5EDED;border-color:#C8A0A0;color:#6B1A1A}
+
+/* TEAMS GRID */
+.teams-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.team-card{padding:12px 14px;border:0.5px solid var(--border);border-radius:6px;background:var(--cream);border-left:3px solid var(--navy)}
+.team-card.nuevo{border-left-color:var(--gold)}
+.team-name{font-size:13px;font-weight:500;color:var(--navy);display:flex;align-items:center;gap:6px}
+.team-new-badge{font-size:9px;background:var(--gold);color:var(--navy);padding:1px 6px;border-radius:8px;font-weight:500;letter-spacing:0.5px}
+.team-members{margin-top:6px;display:flex;flex-direction:column;gap:2px}
+.team-member{font-size:11px;color:var(--muted)}
+
+/* PEOPLE GRID */
+.people-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.person{padding:12px 14px;border:0.5px solid var(--border);border-radius:6px;background:var(--cream)}
+.person-name{font-size:13px;font-weight:500;color:var(--navy)}
+.person-role{font-size:11px;color:var(--muted);margin-top:2px}
+.person-days{display:flex;gap:5px;margin-top:8px}
+.dot{width:20px;height:20px;border-radius:50%;font-size:9px;display:flex;align-items:center;justify-content:center;font-weight:500}
+.dot.sab{background:var(--navy);color:var(--gold-light)}
+.dot.dom{background:var(--gold);color:var(--navy)}
+.dot.off{background:#eee;color:#aaa}
+
+/* RISKS */
+.risk-row{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px}
+.risk-row:last-child{margin-bottom:0}
+.risk-icon{width:24px;height:24px;min-width:24px;border-radius:4px;font-size:12px;display:flex;align-items:center;justify-content:center;font-weight:600}
+.risk-icon.warn{background:#FBF3E0;color:var(--gold)}
+.risk-icon.alert{background:#F5EDED;color:var(--red-soft)}
+.risk-text{font-size:12px;color:var(--muted);line-height:1.6}
+.risk-text strong{color:var(--text);font-weight:500}
+
+/* BARS */
+.bar-h{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.bar-h-label{font-size:12px;color:var(--text);width:120px;flex-shrink:0;text-align:right}
+.bar-h-wrap{flex:1;background:#eee;border-radius:3px;height:18px;position:relative}
+.bar-h-fill{height:18px;border-radius:3px;display:flex;align-items:center;padding-right:8px;justify-content:flex-end;min-width:4px}
+.bar-h-val{font-size:10px;font-weight:500;color:#fff}
+.bar-pct{font-size:10px;color:var(--muted);width:36px;text-align:right;flex-shrink:0}
+
+/* RESP BARS */
+.resp-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.resp-name{font-size:11px;color:var(--text);width:150px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.resp-bar-wrap{flex:1;background:#eee;border-radius:2px;height:8px}
+.resp-bar{height:8px;border-radius:2px}
+.resp-bar.navy{background:var(--navy)}
+.resp-bar.gold{background:var(--gold)}
+.resp-num{font-size:11px;color:var(--muted);width:32px;text-align:right;flex-shrink:0}
+
+/* TABLE */
+.data-table{width:100%;border-collapse:collapse;font-size:12px}
+.data-table th{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);padding:8px 10px;text-align:left;border-bottom:0.5px solid var(--border);font-weight:500}
+.data-table td{padding:9px 10px;border-bottom:0.5px solid #f0ede5;color:var(--text);vertical-align:middle}
+.data-table tr:last-child td{border-bottom:none}
+.data-table .total-row td{background:var(--cream);font-weight:500;font-size:11px}
+.pill{display:inline-block;font-size:10px;padding:3px 9px;border-radius:10px;font-weight:500}
+.pill-paz{background:#E0EAF8;color:#0D2B5A}
+.pill-jacinto{background:#E0F4EE;color:#0A4035}
+.pill-arias{background:#F8EEE0;color:#5A2D0A}
+.pill-lagos{background:#EEE0F8;color:#3D0A5A}
+.pill-morales{background:#F8E0E0;color:#5A1A0A}
+.pill-estrella{background:#F5F5E0;color:#4A4A0A}
+
+/* NOTE */
+.note{font-size:11px;color:var(--muted);background:var(--cream);border-left:2px solid var(--gold);padding:9px 13px;border-radius:0 5px 5px 0;margin-top:12px;line-height:1.6}
+
+/* STATUS BADGE */
+.status-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;padding:4px 12px;border-radius:20px;font-weight:500}
+.status-badge.ongoing{background:#FBF3E0;color:#7A5A0D;border:0.5px solid #DFC07A}
+.status-badge.done{background:#EBF5EE;color:#1A5930;border:0.5px solid #A0C8AE}
+.status-dot{width:7px;height:7px;border-radius:50%}
+.status-dot.amber{background:var(--gold)}
+.status-dot.green{background:#1A5930}
+
+/* TWO COL */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+
+/* FOOTER */
+.page-footer{text-align:center;padding:2rem 0 1rem;font-size:10px;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="nav-brand">
+    <div class="nav-firm">Vinatea &amp; Toyama · CID</div>
+    <div class="nav-title">Redistribución de Procesos 2026</div>
+  </div>
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('plan')">Plan del fin de semana</button>
+    <button class="tab-btn" onclick="switchTab('avance')">Avance al 26 Abr</button>
+  </div>
+  <div class="nav-date">Abril 2026</div>
+</nav>
+
+<!-- ════════════════════════════════════════════
+     PANEL 1: PLAN INICIAL
+════════════════════════════════════════════ -->
+<div class="panel active" id="panel-plan">
+
+  <div class="page-header">
+    <div class="ph-tag">Vinatea &amp; Toyama — CID</div>
+    <h1 class="ph-h1">Plan de Redistribución<br>de Procesos y Equipos</h1>
+    <div class="ph-sub">Fin de semana operativo · Sábado 25 y Domingo 26 de abril de 2026</div>
+    <div class="badges">
+      <span class="badge">1,996 procesos</span>
+      <span class="badge">6 equipos legales</span>
+      <span class="badge">4 personas involucradas</span>
+      <span class="badge">2 días de ejecución</span>
+    </div>
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi"><div class="kpi-num">1,996</div><div class="kpi-lbl">Procesos a migrar</div></div>
+    <div class="kpi"><div class="kpi-num">6</div><div class="kpi-lbl">Equipos legales</div></div>
+    <div class="kpi"><div class="kpi-num">2</div><div class="kpi-lbl">Días de trabajo</div></div>
+    <div class="kpi"><div class="kpi-num">4</div><div class="kpi-lbl">Personas en equipo</div></div>
+  </div>
+
+  <!-- EQUIPOS -->
+  <div class="section">
+    <div class="section-label">Equipos legales en redistribución</div>
+    <div class="teams-grid">
+      <div class="team-card">
+        <div class="team-name">Equipo 1 — Team Morales</div>
+        <div class="team-members">
+          <div class="team-member">Carlos Morales</div>
+          <div class="team-member">Carlos Trelles</div>
+          <div class="team-member">Silvia Maldonado</div>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-name">Equipo 2 — Team Lagos</div>
+        <div class="team-members">
+          <div class="team-member">Cynthia Lagos</div>
+          <div class="team-member">Sergio Tejada</div>
+          <div class="team-member">Milagritos Sueyoshi</div>
+          <div class="team-member">María G. Espinoza</div>
+          <div class="team-member">Mariel Abad</div>
+        </div>
+      </div>
+      <div class="team-card nuevo">
+        <div class="team-name">Equipo 3 — Team Jacinto <span class="team-new-badge">NUEVO</span></div>
+        <div class="team-members">
+          <div class="team-member">Katia Jacinto</div>
+          <div class="team-member">Iván González</div>
+          <div class="team-member">Melissa Flores</div>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-name">Equipo 4 — Team Arias</div>
+        <div class="team-members">
+          <div class="team-member">Elyana Arias</div>
+          <div class="team-member">Carlos Ciriaco</div>
+          <div class="team-member">José Bacalla</div>
+          <div class="team-member">Henrry López</div>
+          <div class="team-member">Andrés Herles</div>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-name">Equipo 5 — Team Estrella</div>
+        <div class="team-members">
+          <div class="team-member">Solanch Estrella</div>
+          <div class="team-member">Sofía Yomond</div>
+          <div class="team-member">Daniela Torres</div>
+          <div class="team-member">Sandra Carrión</div>
+          <div class="team-member">Sol Aragón</div>
+          <div class="team-member">Rodrigo Zavala</div>
+        </div>
+      </div>
+      <div class="team-card nuevo">
+        <div class="team-name">Equipo 6 — Team Paz <span class="team-new-badge">NUEVO</span></div>
+        <div class="team-members">
+          <div class="team-member">Samuel Paz</div>
+          <div class="team-member">Jimena Alcorta</div>
+          <div class="team-member">Nuria Vega</div>
+          <div class="team-member">Alessandra Zegarra</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DÍA 1 -->
+  <div class="section">
+    <div class="section-label">Día 1</div>
+    <div class="section-title">Preparación y mapeo de procesos</div>
+    <div class="section-date" style="margin-bottom:16px">Sábado 25 de abril · Edu + Joselin (todo el día)</div>
+
+    <div class="phase">
+      <div class="phase-num">1</div>
+      <div class="phase-body">
+        <div class="phase-title">Levantamiento del universo de procesos</div>
+        <div class="phase-desc">Identificación y registro de todos los procesos bajo redistribución: principales, vinculados, incidentales y conexos. Ningún proceso debe quedar fuera del mapeo.</div>
+        <div class="phase-tags">
+          <span class="tag blue">Procesos principales</span>
+          <span class="tag blue">Procesos vinculados</span>
+          <span class="tag blue">Incidentales</span>
+        </div>
+      </div>
+    </div>
+    <div class="phase">
+      <div class="phase-num">2</div>
+      <div class="phase-body">
+        <div class="phase-title">Construcción de los Excel de redistribución</div>
+        <div class="phase-desc">Elaboración de un archivo Excel por cada uno de los 6 equipos legales, con nuevos supervisores y responsables asignados. Verificación cruzada para evitar omisiones o duplicidades entre equipos.</div>
+        <div class="phase-tags">
+          <span class="tag amber">Nuevo supervisor</span>
+          <span class="tag amber">Nuevo responsable</span>
+          <span class="tag green">Validación cruzada</span>
+        </div>
+      </div>
+    </div>
+    <div class="phase">
+      <div class="phase-num">3</div>
+      <div class="phase-body">
+        <div class="phase-title">Revisión final y cierre de Excel</div>
+        <div class="phase-desc">Cierre de los 6 archivos con control de calidad. Los Excel quedan listos como insumo para la ejecución del domingo.</div>
+        <div class="phase-tags">
+          <span class="tag green">6 archivos listos para el Domingo</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DÍA 2 -->
+  <div class="section">
+    <div class="section-label">Día 2</div>
+    <div class="section-title">Actualización manual y verificación</div>
+    <div class="section-date" style="margin-bottom:16px">Domingo 26 de abril · Edu + Alessandra + Brando</div>
+
+    <div class="phase">
+      <div class="phase-num gold">A</div>
+      <div class="phase-body">
+        <div class="phase-title">Actualización manual de diligencias en Outlook</div>
+        <div class="phase-desc">Registro manual de las diligencias reasignadas en los calendarios de Outlook de los nuevos responsables. Trabajo en paralelo entre Edu, Alessandra y Brando durante todo el día.</div>
+        <div class="phase-tags">
+          <span class="tag green">Trabajo en paralelo · 3 personas</span>
+          <span class="tag red">Manual · alto volumen</span>
+        </div>
+      </div>
+    </div>
+    <div class="phase">
+      <div class="phase-num gold">B</div>
+      <div class="phase-body">
+        <div class="phase-title">Verificación y cierre</div>
+        <div class="phase-desc">Cotejo de las diligencias actualizadas para confirmar consistencia por equipo. Registro de incidencias o pendientes para seguimiento el lunes.</div>
+        <div class="phase-tags">
+          <span class="tag green">Revisión por equipo</span>
+          <span class="tag amber">Pendientes al lunes</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EQUIPO -->
+  <div class="section">
+    <div class="section-label">Equipo operativo</div>
+    <div class="people-grid">
+      <div class="person">
+        <div class="person-name">Edu</div>
+        <div class="person-role">Coordinador General · Subida, revisión de procesos y tareas</div>
+        <div class="person-role" style="margin-top:3px;font-size:10px;color:var(--gold)">Dom: Actualización manual en Outlook</div>
+        <div class="person-days"><span class="dot sab">S</span><span class="dot dom">D</span></div>
+      </div>
+      <div class="person">
+        <div class="person-name">Joselin</div>
+        <div class="person-role">Construcción de Excel y revisión de procesos</div>
+        <div class="person-days"><span class="dot sab">S</span><span class="dot off">—</span></div>
+      </div>
+      <div class="person">
+        <div class="person-name">Alessandra</div>
+        <div class="person-role">Actualización manual en Outlook</div>
+        <div class="person-days"><span class="dot off">—</span><span class="dot dom">D</span></div>
+      </div>
+      <div class="person">
+        <div class="person-name">Brando</div>
+        <div class="person-role">Actualización manual en Outlook</div>
+        <div class="person-days"><span class="dot off">—</span><span class="dot dom">D</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRIORIDAD DILIGENCIAS -->
+  <div class="section" style="border-left:3px solid var(--gold)">
+    <div class="section-label">Prioridad de ejecución</div>
+    <div style="display:flex;gap:14px;align-items:flex-start">
+      <div style="width:28px;height:28px;min-width:28px;border-radius:50%;background:var(--gold);color:var(--navy);font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center;margin-top:1px">1</div>
+      <div>
+        <div style="font-size:13px;font-weight:500;color:var(--navy);margin-bottom:4px">Actualización de Diligencias en Outlook — Prioridad hasta fin de julio</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6">La actualización de diligencias en los calendarios de Outlook de los nuevos responsables se toma como prioridad absoluta durante todo el período de abril a julio. Las demás actualizaciones pendientes en MyBig (tareas, datos complementarios) se realizarán de forma progresiva en paralelo, conforme avance la capacidad del equipo.</div>
+        <div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap">
+          <span class="tag amber">Prioridad abril – julio</span>
+          <span class="tag green">Resto: ejecución progresiva</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIESGOS -->
+  <div class="section">
+    <div class="section-label">Riesgos y contingencias</div>
+    <div class="risk-row"><div class="risk-icon alert">!</div><div class="risk-text"><strong>Alto volumen en Outlook:</strong> la actualización manual de diligencias es el cuello de botella principal. El trabajo en paralelo de 3 personas es crítico para completarlo en el día.</div></div>
+    <div class="risk-row"><div class="risk-icon warn">~</div><div class="risk-text"><strong>Omisiones en el mapeo:</strong> procesos vinculados e incidentales son propensos a quedar fuera. La revisión cruzada del sábado entre los 6 equipos es la primera línea de control.</div></div>
+    <div class="risk-row"><div class="risk-icon warn">~</div><div class="risk-text"><strong>Procesos no terminados:</strong> se prevé que algunos casos queden pendientes y se gestionen el lunes con un log de incidencias.</div></div>
+  </div>
+
+  <div class="page-footer">Vinatea &amp; Toyama · CID · Abril 2026 · Uso interno</div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     PANEL 2: AVANCE
+════════════════════════════════════════════ -->
+<div class="panel" id="panel-avance">
+
+  <div class="page-header">
+    <div class="ph-tag">Vinatea &amp; Toyama — CID</div>
+    <h1 class="ph-h1">Informe de Avance<br>Redistribución de Procesos</h1>
+    <div class="ph-sub" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+      <span>Domingo 26 de abril de 2026 · Actualización parcial en curso</span>
+      <span class="status-badge ongoing"><span class="status-dot amber"></span>En curso</span>
+    </div>
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi">
+      <div class="kpi-num">1,996</div>
+      <div class="kpi-lbl">Supervisores actualizados</div>
+      <div class="kpi-sub">6 equipos</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-num">1,872</div>
+      <div class="kpi-lbl">Responsables actualizados</div>
+      <div class="kpi-sub">22 responsables distintos</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-num">380</div>
+      <div class="kpi-lbl">Tareas asignadas</div>
+      <div class="kpi-sub">desde el 16/05 · 305 procesos</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-num">23</div>
+      <div class="kpi-lbl">Activos en Suprema</div>
+      <div class="kpi-sub">redistribuidos</div>
+    </div>
+  </div>
+
+  <!-- DISTRIBUCIÓN POR EQUIPO -->
+  <div class="section">
+    <div class="section-label">Distribución por equipo — supervisores (1,996 procesos)</div>
+
+    <div class="bar-h">
+      <div class="bar-h-label">Team Paz</div>
+      <div class="bar-h-wrap">
+        <div class="bar-h-fill" style="width:59.5%;background:#0D1F3C">
+          <span class="bar-h-val">1,188</span>
+        </div>
+      </div>
+      <div class="bar-pct">59.5%</div>
+    </div>
+    <div class="bar-h">
+      <div class="bar-h-label">Team Jacinto</div>
+      <div class="bar-h-wrap">
+        <div class="bar-h-fill" style="width:29.5%;background:#1A5930">
+          <span class="bar-h-val">588</span>
+        </div>
+      </div>
+      <div class="bar-pct">29.5%</div>
+    </div>
+    <div class="bar-h">
+      <div class="bar-h-label">Team Arias</div>
+      <div class="bar-h-wrap" style="position:relative">
+        <div class="bar-h-fill" style="width:4.8%;background:#7A3A0A"></div>
+        <span style="position:absolute;left:calc(4.8% + 8px);top:2px;font-size:10px;color:var(--muted)">96</span>
+      </div>
+      <div class="bar-pct">4.8%</div>
+    </div>
+    <div class="bar-h">
+      <div class="bar-h-label">Team Lagos</div>
+      <div class="bar-h-wrap" style="position:relative">
+        <div class="bar-h-fill" style="width:4.7%;background:#5A1A7A"></div>
+        <span style="position:absolute;left:calc(4.7% + 8px);top:2px;font-size:10px;color:var(--muted)">94</span>
+      </div>
+      <div class="bar-pct">4.7%</div>
+    </div>
+    <div class="bar-h">
+      <div class="bar-h-label">Team Morales</div>
+      <div class="bar-h-wrap" style="position:relative">
+        <div class="bar-h-fill" style="width:1.4%;background:#8B2000"></div>
+        <span style="position:absolute;left:calc(1.4% + 8px);top:2px;font-size:10px;color:var(--muted)">27</span>
+      </div>
+      <div class="bar-pct">1.4%</div>
+    </div>
+    <div class="bar-h">
+      <div class="bar-h-label">Team Estrella</div>
+      <div class="bar-h-wrap" style="position:relative">
+        <div class="bar-h-fill" style="width:0.5%;background:#6B6B0A;min-width:5px"></div>
+        <span style="position:absolute;left:14px;top:2px;font-size:10px;color:var(--muted)">3</span>
+      </div>
+      <div class="bar-pct">0.2%</div>
+    </div>
+  </div>
+
+  <!-- TABLA POR EQUIPO -->
+  <div class="section">
+    <div class="section-label">Detalle por equipo — supervisores y activos en Suprema</div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Equipo</th>
+          <th>Supervisor</th>
+          <th style="text-align:right">Procesos</th>
+          <th style="text-align:right">% del total</th>
+          <th style="text-align:right">En Suprema</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="pill pill-paz">Team Paz</span></td><td>Samuel Paz</td><td style="text-align:right;font-weight:500">1,188</td><td style="text-align:right;color:var(--muted)">59.5%</td><td style="text-align:right">18</td></tr>
+        <tr><td><span class="pill pill-jacinto">Team Jacinto</span></td><td>Katia Jacinto</td><td style="text-align:right;font-weight:500">588</td><td style="text-align:right;color:var(--muted)">29.5%</td><td style="text-align:right">3</td></tr>
+        <tr><td><span class="pill pill-arias">Team Arias</span></td><td>Elyana Arias</td><td style="text-align:right;font-weight:500">96</td><td style="text-align:right;color:var(--muted)">4.8%</td><td style="text-align:right">1</td></tr>
+        <tr><td><span class="pill pill-lagos">Team Lagos</span></td><td>Cynthia Lagos</td><td style="text-align:right;font-weight:500">94</td><td style="text-align:right;color:var(--muted)">4.7%</td><td style="text-align:right">1</td></tr>
+        <tr><td><span class="pill pill-morales">Team Morales</span></td><td>Carlos Morales</td><td style="text-align:right;font-weight:500">27</td><td style="text-align:right;color:var(--muted)">1.4%</td><td style="text-align:right">—</td></tr>
+        <tr><td><span class="pill pill-estrella">Team Estrella</span></td><td>Solanch Estrella</td><td style="text-align:right;font-weight:500">3</td><td style="text-align:right;color:var(--muted)">0.2%</td><td style="text-align:right">—</td></tr>
+        <tr class="total-row"><td colspan="2">Total</td><td style="text-align:right">1,996</td><td style="text-align:right;color:var(--muted)">100%</td><td style="text-align:right">23</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TOP RESPONSABLES + TAREAS -->
+  <div class="two-col">
+    <div class="section">
+      <div class="section-label">Responsables — procesos asignados</div>
+      <div class="resp-row"><div class="resp-name">Rodrigo Zavala</div><div class="resp-bar-wrap"><div class="resp-bar navy" style="width:100%"></div></div><div class="resp-num">229</div></div>
+      <div class="resp-row"><div class="resp-name">Melissa Flores</div><div class="resp-bar-wrap"><div class="resp-bar navy" style="width:99.6%"></div></div><div class="resp-num">228</div></div>
+      <div class="resp-row"><div class="resp-name">Ivan Gonzalez</div><div class="resp-bar-wrap"><div class="resp-bar navy" style="width:83%"></div></div><div class="resp-num">190</div></div>
+      <div class="resp-row"><div class="resp-name">Jimena Alcorta</div><div class="resp-bar-wrap"><div class="resp-bar navy" style="width:76.4%"></div></div><div class="resp-num">175</div></div>
+      <div class="resp-row"><div class="resp-name">Milagritos Sueyoshi</div><div class="resp-bar-wrap"><div class="resp-bar navy" style="width:75.1%"></div></div><div class="resp-num">172</div></div>
+      <div class="resp-row"><div class="resp-name">MG Espinoza</div><div class="resp-bar-wrap"><div class="resp-bar navy" style="width:67.2%"></div></div><div class="resp-num">154</div></div>
+      <div class="resp-row"><div class="resp-name">Mariel Abad</div><div class="resp-bar-wrap"><div class="resp-bar navy" style="width:45.8%"></div></div><div class="resp-num">105</div></div>
+      <div class="resp-row"><div class="resp-name">Daniela Torres</div><div class="resp-bar-wrap"><div class="resp-bar navy" style="width:44.1%"></div></div><div class="resp-num">101</div></div>
+      <div class="resp-row"><div class="resp-name">Nuria Vega</div><div class="resp-bar-wrap"><div class="resp-bar navy" style="width:41.9%"></div></div><div class="resp-num">96</div></div>
+      <div class="resp-row"><div class="resp-name">Samuel Paz</div><div class="resp-bar-wrap"><div class="resp-bar navy" style="width:39.3%"></div></div><div class="resp-num">90</div></div>
+      <div class="resp-row"><div class="resp-name">Carlos Ciriaco</div><div class="resp-bar-wrap"><div class="resp-bar navy" style="width:38.9%"></div></div><div class="resp-num">89</div></div>
+      <div class="resp-row"><div class="resp-name">Henrry López</div><div class="resp-bar-wrap"><div class="resp-bar navy" style="width:29.3%"></div></div><div class="resp-num">67</div></div>
+      <div class="resp-row"><div class="resp-name">Andres Herles</div><div class="resp-bar-wrap"><div class="resp-bar navy" style="width:27.9%"></div></div><div class="resp-num">64</div></div>
+      <div class="resp-row"><div class="resp-name">José Bacalla</div><div class="resp-bar-wrap"><div class="resp-bar navy" style="width:26.2%"></div></div><div class="resp-num">60</div></div>
+      <div class="resp-row"><div class="resp-name">Alessandra Zegarra</div><div class="resp-bar-wrap"><div class="resp-bar navy" style="width:11.4%"></div></div><div class="resp-num">26</div></div>
+      <div class="note">22 responsables únicos · 7 con volumen menor a 10 no mostrados</div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Tareas asignadas desde 16/05 (380)</div>
+      <div class="resp-row"><div class="resp-name">Daniela Torres</div><div class="resp-bar-wrap"><div class="resp-bar gold" style="width:100%"></div></div><div class="resp-num">65</div></div>
+      <div class="resp-row"><div class="resp-name">Jimena Alcorta</div><div class="resp-bar-wrap"><div class="resp-bar gold" style="width:81.5%"></div></div><div class="resp-num">53</div></div>
+      <div class="resp-row"><div class="resp-name">Carlos Ciriaco</div><div class="resp-bar-wrap"><div class="resp-bar gold" style="width:67.7%"></div></div><div class="resp-num">44</div></div>
+      <div class="resp-row"><div class="resp-name">Rodrigo Zavala</div><div class="resp-bar-wrap"><div class="resp-bar gold" style="width:58.5%"></div></div><div class="resp-num">38</div></div>
+      <div class="resp-row"><div class="resp-name">Ivan Gonzalez</div><div class="resp-bar-wrap"><div class="resp-bar gold" style="width:47.7%"></div></div><div class="resp-num">31</div></div>
+      <div class="resp-row"><div class="resp-name">Milagritos Sueyoshi</div><div class="resp-bar-wrap"><div class="resp-bar gold" style="width:40%"></div></div><div class="resp-num">26</div></div>
+      <div class="resp-row"><div class="resp-name">Melissa Flores</div><div class="resp-bar-wrap"><div class="resp-bar gold" style="width:36.9%"></div></div><div class="resp-num">24</div></div>
+      <div class="resp-row"><div class="resp-name">Henrry López</div><div class="resp-bar-wrap"><div class="resp-bar gold" style="width:36.9%"></div></div><div class="resp-num">24</div></div>
+      <div class="resp-row"><div class="resp-name">MG Espinoza</div><div class="resp-bar-wrap"><div class="resp-bar gold" style="width:30.8%"></div></div><div class="resp-num">20</div></div>
+      <div class="resp-row"><div class="resp-name">Nuria Vega</div><div class="resp-bar-wrap"><div class="resp-bar gold" style="width:24.6%"></div></div><div class="resp-num">16</div></div>
+      <div class="resp-row"><div class="resp-name">Mariel Abad</div><div class="resp-bar-wrap"><div class="resp-bar gold" style="width:21.5%"></div></div><div class="resp-num">14</div></div>
+      <div class="resp-row"><div class="resp-name">Samuel Paz</div><div class="resp-bar-wrap"><div class="resp-bar gold" style="width:13.8%"></div></div><div class="resp-num">9</div></div>
+      <div class="resp-row"><div class="resp-name">Andres Herles</div><div class="resp-bar-wrap"><div class="resp-bar gold" style="width:9.2%"></div></div><div class="resp-num">6</div></div>
+      <div class="resp-row"><div class="resp-name">José Bacalla</div><div class="resp-bar-wrap"><div class="resp-bar gold" style="width:7.7%"></div></div><div class="resp-num">5</div></div>
+      <div class="resp-row"><div class="resp-name">Sandra Carrión</div><div class="resp-bar-wrap"><div class="resp-bar gold" style="width:4.6%"></div></div><div class="resp-num">3</div></div>
+      <div class="note">305 procesos únicos con tareas · 17 personas asignadas</div>
+    </div>
+  </div>
+
+  <div class="page-footer">Vinatea &amp; Toyama · CID · 26 Abr 2026 · En curso · Uso interno</div>
+</div>
+
+<script>
+function switchTab(id){
+  document.querySelectorAll('.tab-btn').forEach((b,i)=>{
+    b.classList.toggle('active', (i===0&&id==='plan')||(i===1&&id==='avance'));
+  });
+  document.querySelectorAll('.panel').forEach(p=>{
+    p.classList.toggle('active', p.id==='panel-'+id);
+  });
+}
+</script>
+</body>
+</html>
