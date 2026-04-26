@@ -163,6 +163,7 @@ html,body{min-height:100%;background:var(--cream);font-family:'Segoe UI','Helvet
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('plan')">Plan del fin de semana</button>
     <button class="tab-btn" onclick="switchTab('avance')">Avance al 25 Abr</button>
+    <button class="tab-btn" onclick="switchTab('diligencias')">Diligencias desde 16 May</button>
   </div>
   <div class="nav-date">Abril 2026</div>
 </nav>
@@ -543,13 +544,355 @@ html,body{min-height:100%;background:var(--cream);font-family:'Segoe UI','Helvet
     </div>
   </div>
 
+  <!-- CLIENTES POR EQUIPO -->
+  <div class="section" style="margin-top:0">
+    <div class="section-label">Principales clientes por equipo</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+
+      <div style="border:0.5px solid var(--border);border-radius:6px;overflow:hidden">
+        <div style="background:var(--navy);padding:10px 14px;display:flex;align-items:center;justify-content:space-between">
+          <span class="pill pill-paz" style="font-size:11px">Team Paz</span>
+          <span style="font-size:10px;color:rgba(255,255,255,0.45)">1,188 proc · 13 clientes</span>
+        </div>
+        <div style="padding:10px 14px;background:#fff">
+          <div style="font-size:11px;color:var(--muted);margin-bottom:8px;font-weight:500">Supervisor: Samuel Paz</div>
+          <div style="font-size:11px;color:var(--text);line-height:1.9">
+            Banco de Crédito del Perú <span style="color:var(--muted)">(621)</span><br>
+            Minera Aurífera Retamas <span style="color:var(--muted)">(297)</span><br>
+            Cía. Minera Antapaccay <span style="color:var(--muted)">(169)</span><br>
+            Cía. Minera Raura <span style="color:var(--muted)">(30)</span><br>
+            Agroindustrial Laredo <span style="color:var(--muted)">(16)</span><br>
+            Supemsa <span style="color:var(--muted)">(13)</span> · Emusa Perú <span style="color:var(--muted)">(12)</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="border:0.5px solid var(--border);border-radius:6px;overflow:hidden">
+        <div style="background:#1A5930;padding:10px 14px;display:flex;align-items:center;justify-content:space-between">
+          <span class="pill pill-jacinto" style="font-size:11px">Team Jacinto</span>
+          <span style="font-size:10px;color:rgba(255,255,255,0.45)">588 proc · 110 clientes</span>
+        </div>
+        <div style="padding:10px 14px;background:#fff">
+          <div style="font-size:11px;color:var(--muted);margin-bottom:8px;font-weight:500">Supervisor: Katia Jacinto</div>
+          <div style="font-size:11px;color:var(--text);line-height:1.9">
+            Quimpac S.A. <span style="color:var(--muted)">(78)</span><br>
+            San Fernando S.A. <span style="color:var(--muted)">(62)</span><br>
+            Engie Energía Perú <span style="color:var(--muted)">(46)</span><br>
+            LATAM Airlines Perú <span style="color:var(--muted)">(30)</span><br>
+            Mibanco <span style="color:var(--muted)">(20)</span><br>
+            Lima Airport Partners <span style="color:var(--muted)">(16)</span> · y 104 más
+          </div>
+        </div>
+      </div>
+
+      <div style="border:0.5px solid var(--border);border-radius:6px;overflow:hidden">
+        <div style="background:#5A5A10;padding:10px 14px;display:flex;align-items:center;justify-content:space-between">
+          <span class="pill pill-estrella" style="font-size:11px">Team Estrella</span>
+          <span style="font-size:10px;color:rgba(255,255,255,0.45)">3 proc · 2 clientes</span>
+        </div>
+        <div style="padding:10px 14px;background:#fff">
+          <div style="font-size:11px;color:var(--muted);margin-bottom:8px;font-weight:500">Supervisor: Solanch Estrella</div>
+          <div style="font-size:11px;color:var(--text);line-height:1.9">
+            Nexa Resources Atacocha <span style="color:var(--muted)">(2)</span><br>
+            Contugas <span style="color:var(--muted)">(1)</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="border:0.5px solid var(--border);border-radius:6px;overflow:hidden">
+        <div style="background:#7A3A0A;padding:10px 14px;display:flex;align-items:center;justify-content:space-between">
+          <span class="pill pill-arias" style="font-size:11px">Team Arias</span>
+          <span style="font-size:10px;color:rgba(255,255,255,0.45)">96 proc · 2 clientes</span>
+        </div>
+        <div style="padding:10px 14px;background:#fff">
+          <div style="font-size:11px;color:var(--muted);margin-bottom:8px;font-weight:500">Supervisor: Elyana Arias</div>
+          <div style="font-size:11px;color:var(--text);line-height:1.9">
+            Pesquera Diamante S.A. <span style="color:var(--muted)">(74)</span><br>
+            Papelera Nacional - PANASA <span style="color:var(--muted)">(22)</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="border:0.5px solid var(--border);border-radius:6px;overflow:hidden">
+        <div style="background:#3D0A5A;padding:10px 14px;display:flex;align-items:center;justify-content:space-between">
+          <span class="pill pill-lagos" style="font-size:11px">Team Lagos</span>
+          <span style="font-size:10px;color:rgba(255,255,255,0.45)">94 proc · 46 clientes</span>
+        </div>
+        <div style="padding:10px 14px;background:#fff">
+          <div style="font-size:11px;color:var(--muted);margin-bottom:8px;font-weight:500">Supervisor: Cynthia Lagos</div>
+          <div style="font-size:11px;color:var(--text);line-height:1.9">
+            Hortifrut Perú <span style="color:var(--muted)">(26)</span><br>
+            Camposol S.A. <span style="color:var(--muted)">(3)</span><br>
+            Arzobispado de Lima <span style="color:var(--muted)">(3)</span><br>
+            Cía. Minera Agr. Calcáreos <span style="color:var(--muted)">(3)</span><br>
+            Inv. Peruanas Ñaña <span style="color:var(--muted)">(3)</span><br>
+            y 41 clientes más
+          </div>
+        </div>
+      </div>
+
+      <div style="border:0.5px solid var(--border);border-radius:6px;overflow:hidden">
+        <div style="background:#8B2000;padding:10px 14px;display:flex;align-items:center;justify-content:space-between">
+          <span class="pill pill-morales" style="font-size:11px">Team Morales</span>
+          <span style="font-size:10px;color:rgba(255,255,255,0.45)">27 proc · 6 clientes</span>
+        </div>
+        <div style="padding:10px 14px;background:#fff">
+          <div style="font-size:11px;color:var(--muted);margin-bottom:8px;font-weight:500">Supervisor: Carlos Morales</div>
+          <div style="font-size:11px;color:var(--text);line-height:1.9">
+            Pluspetrol Perú Corporation <span style="color:var(--muted)">(18)</span><br>
+            Salaverry Terminal Internacional <span style="color:var(--muted)">(4)</span><br>
+            Complejo Agroindustrial Beta <span style="color:var(--muted)">(2)</span><br>
+            Aenza S.A.A. <span style="color:var(--muted)">(1)</span><br>
+            Cerámica Lima <span style="color:var(--muted)">(1)</span><br>
+            Pan American Silver Huarón <span style="color:var(--muted)">(1)</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="note" style="margin-top:10px">Datos cruzados del universo de 1,996 procesos redistribuidos con el Reporte Total de Procesos (Semana 16). 1,977 procesos con cliente identificado · 19 sin match. Los números en paréntesis indican cantidad de procesos por cliente en cada equipo.</div>
+  </div>
+
+  <div class="page-footer">Vinatea &amp; Toyama · CID · 25 Abr 2026 · En curso · Uso interno</div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     PANEL 3: DILIGENCIAS DESDE 16 MAY
+════════════════════════════════════════════ -->
+<style>
+.priority-banner{
+  background:var(--navy);border-radius:8px;
+  padding:1.5rem 2rem;margin-bottom:1.5rem;
+  display:grid;grid-template-columns:1fr auto;align-items:center;gap:1rem;
+  border-left:4px solid var(--gold);
+}
+.pb-label{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.pb-title{font-size:17px;color:#fff;font-weight:400}
+.pb-desc{font-size:11px;color:rgba(255,255,255,0.5);margin-top:4px}
+.pb-numbers{display:flex;gap:1.5rem}
+.pb-num{text-align:center}
+.pb-n{font-size:28px;color:var(--gold-light);font-weight:400;line-height:1}
+.pb-l{font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.4);margin-top:3px}
+.pb-divider{width:0.5px;background:rgba(255,255,255,0.1);align-self:stretch}
+.dili-kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:0.5px solid var(--border);border-radius:6px;overflow:hidden;margin-bottom:1.5rem}
+.dili-kpi{background:var(--white);padding:14px 16px;text-align:center}
+.dili-kpi-num{font-size:26px;font-weight:400;color:var(--navy);line-height:1}
+.dili-kpi-lbl{font-size:10px;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:1px}
+.dili-kpi-sub{font-size:10px;color:var(--gold);margin-top:2px;font-weight:500}
+.dili-grid2{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.25rem}
+.dili-card{background:var(--white);border:0.5px solid var(--border);border-radius:8px;padding:1.4rem}
+.dili-card-label{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:12px}
+.team-bar-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.team-bar-row:last-child{margin-bottom:0}
+.tbr-name{font-size:11px;color:var(--text);width:110px;flex-shrink:0}
+.tbr-wrap{flex:1;background:#eee;border-radius:3px;height:18px;position:relative}
+.tbr-fill{height:18px;border-radius:3px;display:flex;align-items:center;padding:0 7px;min-width:4px}
+.tbr-fill-val{font-size:10px;font-weight:600;color:#fff}
+.tbr-pct{font-size:10px;color:var(--muted);width:34px;text-align:right;flex-shrink:0}
+.month-row{display:flex;align-items:center;gap:8px;margin-bottom:9px}
+.month-row:last-child{margin-bottom:0}
+.mr-name{font-size:11px;color:var(--text);width:72px;flex-shrink:0}
+.mr-wrap{flex:1;background:#eee;border-radius:2px;height:13px}
+.mr-fill{height:13px;border-radius:2px}
+.mr-num{font-size:11px;color:var(--muted);width:26px;text-align:right;flex-shrink:0}
+.mr-badge{font-size:9px;padding:1px 6px;border-radius:8px;font-weight:500;flex-shrink:0;border:0.5px solid}
+.mr-badge.prioridad{background:var(--amber-soft,#FBF3E0);color:#7A5A0D;border-color:#DFC07A}
+.mr-badge.progresivo{background:#EBF5EE;color:#1A5930;border-color:#A0C8AE}
+.asig-card-row{display:flex;align-items:center;gap:10px;padding:10px 12px;border:0.5px solid var(--border);border-radius:5px;background:var(--cream,#F8F5EE);margin-bottom:8px}
+.asig-card-row:last-child{margin-bottom:0}
+.asig-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.asig-dot.naranja{background:#E07A28}
+.asig-dot.celeste{background:#28A0C8}
+.asig-aname{font-size:12px;font-weight:500;color:var(--navy);flex:1}
+.asig-detail{font-size:10px;color:var(--muted)}
+.asig-total{font-size:13px;font-weight:600;color:var(--navy)}
+.tipo-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:0.5px solid #f0ede5}
+.tipo-row:last-child{border-bottom:none}
+.tipo-name{font-size:11px;color:var(--text);flex:1;padding-right:10px}
+.tipo-bar-wrap{width:70px;background:#eee;border-radius:2px;height:6px;margin-right:8px}
+.tipo-bar{height:6px;border-radius:2px;background:var(--gold)}
+.tipo-num{font-size:11px;font-weight:500;color:var(--navy);width:26px;text-align:right}
+.ab-row{display:flex;align-items:center;gap:8px;margin-bottom:7px}
+.ab-row:last-child{margin-bottom:0}
+.ab-name{font-size:11px;color:var(--text);width:145px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ab-wrap{flex:1;background:#eee;border-radius:2px;height:8px}
+.ab-fill{height:8px;border-radius:2px;background:var(--navy)}
+.ab-num{font-size:11px;color:var(--muted);width:26px;text-align:right;flex-shrink:0}
+.inst-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:1.25rem}
+.inst-card{padding:12px 14px;border-radius:6px;border:0.5px solid var(--border);background:var(--cream,#F8F5EE)}
+.inst-num{font-size:22px;color:var(--navy);line-height:1}
+.inst-lbl{font-size:10px;color:var(--muted);margin-top:3px;text-transform:uppercase;letter-spacing:0.8px}
+.inst-pct{font-size:11px;color:var(--gold);margin-top:2px}
+.dili-matrix{width:100%;border-collapse:collapse;font-size:11px}
+.dili-matrix th{font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);padding:6px 8px;text-align:center;border-bottom:0.5px solid var(--border);font-weight:500}
+.dili-matrix th:first-child{text-align:left}
+.dili-matrix td{padding:8px 8px;border-bottom:0.5px solid #f0ede5;text-align:center;font-size:11px}
+.dili-matrix td:first-child{text-align:left;font-weight:500;color:var(--navy)}
+.dili-matrix tr:last-child td{background:var(--cream,#F8F5EE);font-weight:600;font-size:10px;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted)}
+.cell-pri{background:#FBF3E0!important;font-weight:600;color:var(--navy)}
+.cell-prog{background:#EBF5EE!important}
+</style>
+
+<div class="panel" id="panel-diligencias">
+  <div class="page-header">
+    <div class="ph-tag">Vinatea &amp; Toyama — CID</div>
+    <h1 class="ph-h1">Actualización de Diligencias<br><span style="color:var(--gold-light)">en Outlook</span></h1>
+    <div class="ph-sub">Desde el 16 de mayo de 2026 · 6 equipos legales · Seguimiento operativo</div>
+    <div class="badges">
+      <span class="badge">442 diligencias totales</span>
+      <span class="badge">227 prioridad mayo–junio</span>
+      <span class="badge">215 ejecución progresiva</span>
+      <span class="badge">19 abogados asignados</span>
+    </div>
+  </div>
+
+  <!-- BANNER PRIORIDAD -->
+  <div class="priority-banner">
+    <div>
+      <div class="pb-label">Criterio de priorización</div>
+      <div class="pb-title">Diligencias Mayo–Junio como primera prioridad de ejecución</div>
+      <div class="pb-desc">Las diligencias de julio en adelante se actualizarán de forma progresiva conforme avance la capacidad del equipo.</div>
+    </div>
+    <div class="pb-numbers">
+      <div class="pb-num"><div class="pb-n">227</div><div class="pb-l">Prioridad<br>May–Jun</div></div>
+      <div class="pb-divider"></div>
+      <div class="pb-num"><div class="pb-n">215</div><div class="pb-l">Progresivo<br>Jul+</div></div>
+    </div>
+  </div>
+
+  <!-- KPIs -->
+  <div class="dili-kpi-grid">
+    <div class="dili-kpi"><div class="dili-kpi-num">442</div><div class="dili-kpi-lbl">Diligencias totales</div><div class="dili-kpi-sub">6 equipos</div></div>
+    <div class="dili-kpi"><div class="dili-kpi-num">227</div><div class="dili-kpi-lbl">Prioridad inmediata</div><div class="dili-kpi-sub">Mayo + Junio</div></div>
+    <div class="dili-kpi"><div class="dili-kpi-num">19</div><div class="dili-kpi-lbl">Abogados asignados</div><div class="dili-kpi-sub">Con diligencias activas</div></div>
+    <div class="dili-kpi"><div class="dili-kpi-num">100%</div><div class="dili-kpi-lbl">Audiencias virtuales</div><div class="dili-kpi-sub">Modalidad uniforme</div></div>
+  </div>
+
+  <!-- EQUIPOS + MENSUAL -->
+  <div class="dili-grid2">
+    <div class="dili-card">
+      <div class="dili-card-label">Distribución por equipo</div>
+      <div class="team-bar-row"><div class="tbr-name"><span class="pill pill-paz">Team Paz</span></div><div class="tbr-wrap"><div class="tbr-fill" style="width:100%;background:#0D1F3C"><span class="tbr-fill-val">177</span></div></div><div class="tbr-pct">40.0%</div></div>
+      <div class="team-bar-row"><div class="tbr-name"><span class="pill pill-estrella">Team Estrella</span></div><div class="tbr-wrap"><div class="tbr-fill" style="width:58.8%;background:#5A5A10"><span class="tbr-fill-val">104</span></div></div><div class="tbr-pct">23.5%</div></div>
+      <div class="team-bar-row"><div class="tbr-name"><span class="pill pill-jacinto">Team Jacinto</span></div><div class="tbr-wrap"><div class="tbr-fill" style="width:31.6%;background:#0A4035"><span class="tbr-fill-val">56</span></div></div><div class="tbr-pct">12.7%</div></div>
+      <div class="team-bar-row"><div class="tbr-name"><span class="pill pill-lagos">Team Lagos</span></div><div class="tbr-wrap"><div class="tbr-fill" style="width:30.5%;background:#3D0A5A"><span class="tbr-fill-val">54</span></div></div><div class="tbr-pct">12.2%</div></div>
+      <div class="team-bar-row"><div class="tbr-name"><span class="pill pill-arias">Team Arias</span></div><div class="tbr-wrap"><div class="tbr-fill" style="width:28.2%;background:#7A3A0A"><span class="tbr-fill-val">50</span></div></div><div class="tbr-pct">11.3%</div></div>
+      <div class="team-bar-row"><div class="tbr-name"><span class="pill pill-morales">Team Morales</span></div><div class="tbr-wrap" style="position:relative"><div class="tbr-fill" style="width:0.6%;background:#8B2000;min-width:4px"></div><span style="position:absolute;left:10px;top:2px;font-size:10px;color:var(--muted)">1</span></div><div class="tbr-pct">0.2%</div></div>
+      <div class="note">Team Paz concentra el 40% del total. Team Jacinto y Team Paz son equipos nuevos.</div>
+    </div>
+    <div class="dili-card">
+      <div class="dili-card-label">Distribución mensual</div>
+      <div class="month-row"><div class="mr-name">Mayo</div><div class="mr-wrap"><div class="mr-fill" style="width:53.4%;background:#C49A3C"></div></div><div class="mr-num">79</div><span class="mr-badge prioridad">Prioridad</span></div>
+      <div class="month-row"><div class="mr-name">Junio</div><div class="mr-wrap"><div class="mr-fill" style="width:100%;background:#C49A3C"></div></div><div class="mr-num">148</div><span class="mr-badge prioridad">Prioridad</span></div>
+      <div class="month-row"><div class="mr-name">Julio</div><div class="mr-wrap"><div class="mr-fill" style="width:50.7%;background:#1A5930"></div></div><div class="mr-num">75</div><span class="mr-badge progresivo">Progresivo</span></div>
+      <div class="month-row"><div class="mr-name">Agosto</div><div class="mr-wrap"><div class="mr-fill" style="width:37.8%;background:#1A5930"></div></div><div class="mr-num">56</div><span class="mr-badge progresivo">Progresivo</span></div>
+      <div class="month-row"><div class="mr-name">Septiembre</div><div class="mr-wrap"><div class="mr-fill" style="width:31.1%;background:#1A5930"></div></div><div class="mr-num">46</div><span class="mr-badge progresivo">Progresivo</span></div>
+      <div class="month-row"><div class="mr-name">Octubre</div><div class="mr-wrap"><div class="mr-fill" style="width:14.2%;background:#1A5930"></div></div><div class="mr-num">21</div><span class="mr-badge progresivo">Progresivo</span></div>
+      <div class="month-row"><div class="mr-name">Noviembre</div><div class="mr-wrap"><div class="mr-fill" style="width:6.1%;background:#1A5930"></div></div><div class="mr-num">9</div><span class="mr-badge progresivo">Progresivo</span></div>
+      <div class="month-row"><div class="mr-name">Otros</div><div class="mr-wrap"><div class="mr-fill" style="width:5.4%;background:#aaa"></div></div><div class="mr-num">8</div><span class="mr-badge progresivo">Progresivo</span></div>
+    </div>
+  </div>
+
+  <!-- ASIGNACIÓN + TIPO -->
+  <div class="dili-grid2">
+    <div class="dili-card">
+      <div class="dili-card-label">Asignación operativa — prioridad mayo–junio</div>
+      <div style="display:flex;gap:16px;margin-bottom:12px">
+        <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted)"><span style="width:10px;height:10px;border-radius:50%;background:#E07A28;display:inline-block"></span>Naranja = Alessandra</div>
+        <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted)"><span style="width:10px;height:10px;border-radius:50%;background:#28A0C8;display:inline-block"></span>Celeste = Brando</div>
+      </div>
+      <div class="asig-card-row"><div class="asig-dot naranja"></div><div class="asig-aname">Alessandra Hernández</div><div class="asig-detail">May: 21 · Jun: 29</div><div class="asig-total">50</div></div>
+      <div class="asig-card-row"><div class="asig-dot celeste"></div><div class="asig-aname">Brando Castro</div><div class="asig-detail">May: 58 · Jun: 119</div><div class="asig-total">177</div></div>
+      <div class="note">227 diligencias de mayo–junio divididas por color en el Excel de Joselin. El resto (215) se ejecuta progresivamente.</div>
+    </div>
+    <div class="dili-card">
+      <div class="dili-card-label">Tipo de audiencia</div>
+      <div class="tipo-row"><div class="tipo-name">Audiencia de Juzgamiento</div><div class="tipo-bar-wrap"><div class="tipo-bar" style="width:100%"></div></div><div class="tipo-num">117</div></div>
+      <div class="tipo-row"><div class="tipo-name">Audiencia Única</div><div class="tipo-bar-wrap"><div class="tipo-bar" style="width:98.3%"></div></div><div class="tipo-num">115</div></div>
+      <div class="tipo-row"><div class="tipo-name">Vista de la Causa</div><div class="tipo-bar-wrap"><div class="tipo-bar" style="width:62.4%"></div></div><div class="tipo-num">73</div></div>
+      <div class="tipo-row"><div class="tipo-name">Audiencia de Conciliación</div><div class="tipo-bar-wrap"><div class="tipo-bar" style="width:59%"></div></div><div class="tipo-num">69</div></div>
+      <div class="tipo-row"><div class="tipo-name">Vista en Suprema / TC</div><div class="tipo-bar-wrap"><div class="tipo-bar" style="width:17.1%"></div></div><div class="tipo-num">20</div></div>
+      <div class="tipo-row"><div class="tipo-name">Juzgamiento (Continuación)</div><div class="tipo-bar-wrap"><div class="tipo-bar" style="width:14.5%"></div></div><div class="tipo-num">17</div></div>
+      <div class="tipo-row"><div class="tipo-name">Otras audiencias</div><div class="tipo-bar-wrap"><div class="tipo-bar" style="width:27.4%"></div></div><div class="tipo-num">31</div></div>
+    </div>
+  </div>
+
+  <!-- ABOGADOS + INSTANCIA -->
+  <div class="dili-grid2" style="margin-bottom:1.25rem">
+    <div class="dili-card">
+      <div class="dili-card-label">Abogados con diligencias asignadas (19)</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 1.5rem">
+        <div>
+          <div class="ab-row"><div class="ab-name">Alessandra Zegarra</div><div class="ab-wrap"><div class="ab-fill" style="width:100%"></div></div><div class="ab-num">78</div></div>
+          <div class="ab-row"><div class="ab-name">Daniela Torres</div><div class="ab-wrap"><div class="ab-fill" style="width:83.3%"></div></div><div class="ab-num">65</div></div>
+          <div class="ab-row"><div class="ab-name">Jimena Alcorta</div><div class="ab-wrap"><div class="ab-fill" style="width:65.4%"></div></div><div class="ab-num">51</div></div>
+          <div class="ab-row"><div class="ab-name">Nuria Vega</div><div class="ab-wrap"><div class="ab-fill" style="width:43.6%"></div></div><div class="ab-num">34</div></div>
+          <div class="ab-row"><div class="ab-name">Rodrigo Zavala</div><div class="ab-wrap"><div class="ab-fill" style="width:43.6%"></div></div><div class="ab-num">34</div></div>
+          <div class="ab-row"><div class="ab-name">Carlos Ciriaco</div><div class="ab-wrap"><div class="ab-fill" style="width:32.1%"></div></div><div class="ab-num">25</div></div>
+          <div class="ab-row"><div class="ab-name">Milagritos Sueyoshi</div><div class="ab-wrap"><div class="ab-fill" style="width:32.1%"></div></div><div class="ab-num">25</div></div>
+          <div class="ab-row"><div class="ab-name">Melissa Flores</div><div class="ab-wrap"><div class="ab-fill" style="width:30.8%"></div></div><div class="ab-num">24</div></div>
+          <div class="ab-row"><div class="ab-name">Ivan Gonzalez</div><div class="ab-wrap"><div class="ab-fill" style="width:30.8%"></div></div><div class="ab-num">24</div></div>
+        </div>
+        <div>
+          <div class="ab-row"><div class="ab-name">MG Espinoza</div><div class="ab-wrap"><div class="ab-fill" style="width:25.6%"></div></div><div class="ab-num">20</div></div>
+          <div class="ab-row"><div class="ab-name">Henrry López</div><div class="ab-wrap"><div class="ab-fill" style="width:21.8%"></div></div><div class="ab-num">17</div></div>
+          <div class="ab-row"><div class="ab-name">Samuel Paz</div><div class="ab-wrap"><div class="ab-fill" style="width:17.9%"></div></div><div class="ab-num">14</div></div>
+          <div class="ab-row"><div class="ab-name">Mariel Abad</div><div class="ab-wrap"><div class="ab-fill" style="width:12.8%"></div></div><div class="ab-num">10</div></div>
+          <div class="ab-row"><div class="ab-name">Katia Jacinto</div><div class="ab-wrap"><div class="ab-fill" style="width:10.3%"></div></div><div class="ab-num">8</div></div>
+          <div class="ab-row"><div class="ab-name">José Bacalla</div><div class="ab-wrap"><div class="ab-fill" style="width:6.4%"></div></div><div class="ab-num">5</div></div>
+          <div class="ab-row"><div class="ab-name">Andrés Herles</div><div class="ab-wrap"><div class="ab-fill" style="width:3.8%"></div></div><div class="ab-num">3</div></div>
+          <div class="ab-row"><div class="ab-name">Sandra Carrión</div><div class="ab-wrap"><div class="ab-fill" style="width:3.8%"></div></div><div class="ab-num">3</div></div>
+          <div class="ab-row"><div class="ab-name">Solanch / Arturo</div><div class="ab-wrap"><div class="ab-fill" style="width:2.6%"></div></div><div class="ab-num">2</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="dili-card">
+      <div class="dili-card-label">Por instancia</div>
+      <div class="inst-grid">
+        <div class="inst-card"><div class="inst-num">332</div><div class="inst-lbl">Primera Instancia</div><div class="inst-pct">75.1%</div></div>
+        <div class="inst-card"><div class="inst-num">83</div><div class="inst-lbl">Segunda Instancia</div><div class="inst-pct">18.8%</div></div>
+        <div class="inst-card"><div class="inst-num">23</div><div class="inst-lbl">Tercera Instancia</div><div class="inst-pct">5.2%</div></div>
+        <div class="inst-card"><div class="inst-num">4</div><div class="inst-lbl">Ejecución</div><div class="inst-pct">0.9%</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MATRIZ -->
+  <div class="dili-card" style="margin-bottom:0">
+    <div class="dili-card-label">Matriz de diligencias por equipo y mes</div>
+    <table class="dili-matrix">
+      <thead>
+        <tr>
+          <th>Equipo</th>
+          <th style="background:#FBF3E0">Mayo</th>
+          <th style="background:#FBF3E0">Junio</th>
+          <th style="background:#EBF5EE">Julio</th>
+          <th style="background:#EBF5EE">Agosto</th>
+          <th style="background:#EBF5EE">Sep</th>
+          <th style="background:#EBF5EE">Oct+</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="pill pill-paz">Team Paz</span></td><td class="cell-pri">46</td><td class="cell-pri">66</td><td class="cell-prog">27</td><td class="cell-prog">14</td><td class="cell-prog">13</td><td class="cell-prog">11</td><td><strong>177</strong></td></tr>
+        <tr><td><span class="pill pill-estrella">Team Estrella</span></td><td class="cell-pri">7</td><td class="cell-pri">32</td><td class="cell-prog">19</td><td class="cell-prog">16</td><td class="cell-prog">19</td><td class="cell-prog">11</td><td><strong>104</strong></td></tr>
+        <tr><td><span class="pill pill-jacinto">Team Jacinto</span></td><td class="cell-pri">8</td><td class="cell-pri">20</td><td class="cell-prog">9</td><td class="cell-prog">9</td><td class="cell-prog">6</td><td class="cell-prog">4</td><td><strong>56</strong></td></tr>
+        <tr><td><span class="pill pill-lagos">Team Lagos</span></td><td class="cell-pri">12</td><td class="cell-pri">15</td><td class="cell-prog">10</td><td class="cell-prog">9</td><td class="cell-prog">4</td><td class="cell-prog">4</td><td><strong>54</strong></td></tr>
+        <tr><td><span class="pill pill-arias">Team Arias</span></td><td class="cell-pri">6</td><td class="cell-pri">15</td><td class="cell-prog">10</td><td class="cell-prog">7</td><td class="cell-prog">4</td><td class="cell-prog">8</td><td><strong>50</strong></td></tr>
+        <tr><td><span class="pill pill-morales">Team Morales</span></td><td class="cell-pri">—</td><td class="cell-pri">—</td><td class="cell-prog">—</td><td class="cell-prog">1</td><td class="cell-prog">—</td><td class="cell-prog">—</td><td><strong>1</strong></td></tr>
+        <tr><td>Total</td><td class="cell-pri"><strong>79</strong></td><td class="cell-pri"><strong>148</strong></td><td class="cell-prog"><strong>75</strong></td><td class="cell-prog"><strong>56</strong></td><td class="cell-prog"><strong>46</strong></td><td class="cell-prog"><strong>38</strong></td><td><strong>442</strong></td></tr>
+      </tbody>
+    </table>
+    <div class="note" style="margin-top:10px">Fondo <span style="background:#FBF3E0;padding:1px 5px;border-radius:2px">ámbar</span> = prioridad inmediata (mayo–junio: 227). Fondo <span style="background:#EBF5EE;padding:1px 5px;border-radius:2px">verde</span> = ejecución progresiva (julio+: 215).</div>
+  </div>
+
   <div class="page-footer">Vinatea &amp; Toyama · CID · 25 Abr 2026 · En curso · Uso interno</div>
 </div>
 
 <script>
 function switchTab(id){
   document.querySelectorAll('.tab-btn').forEach((b,i)=>{
-    b.classList.toggle('active', (i===0&&id==='plan')||(i===1&&id==='avance'));
+    b.classList.toggle('active', (i===0&&id==='plan')||(i===1&&id==='avance')||(i===2&&id==='diligencias'));
   });
   document.querySelectorAll('.panel').forEach(p=>{
     p.classList.toggle('active', p.id==='panel-'+id);
