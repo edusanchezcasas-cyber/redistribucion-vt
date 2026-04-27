@@ -1197,6 +1197,44 @@ function switchTab(id){
   </div>
 
 
+
+  <!-- CLIENTES COMPARTIDOS -->
+  <div class="section" style="margin-bottom:1.25rem;border-left:3px solid var(--gold)">
+    <div class="section-label">Clientes presentes en más de un equipo</div>
+    <div style="font-size:12px;color:var(--muted);margin-bottom:14px;line-height:1.6">
+      Se identificaron <strong style="color:var(--text)">5 clientes</strong> con procesos distribuidos en más de un equipo. En la mayoría de casos el volumen es marginal en uno de los dos. Se recomienda revisar <strong style="color:var(--text)">Agroindustrias San Jacinto</strong> por estar repartido sin un equipo claramente dominante.
+    </div>
+    <table style="width:100%;border-collapse:collapse;font-size:11px">
+      <thead>
+        <tr style="background:var(--navy)">
+          <th style="color:var(--gold-light);padding:8px 10px;text-align:left;font-size:9px;letter-spacing:1px;text-transform:uppercase">Cliente</th>
+          <th style="color:var(--gold-light);padding:8px 10px;text-align:left;font-size:9px;letter-spacing:1px;text-transform:uppercase">Equipo</th>
+          <th style="color:var(--gold-light);padding:8px 10px;text-align:center;font-size:9px;letter-spacing:1px;text-transform:uppercase">Procesos</th>
+          <th style="color:var(--gold-light);padding:8px 10px;text-align:left;font-size:9px;letter-spacing:1px;text-transform:uppercase">Pacto</th>
+          <th style="color:var(--gold-light);padding:8px 10px;text-align:left;font-size:9px;letter-spacing:1px;text-transform:uppercase">Observación</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Retamas -->
+        <tr><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;font-weight:500" rowspan="2">Minera Aurífera Retamas</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5"><span class="pill pill-paz">Team Paz</span></td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center;font-weight:600">310</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">Fijo / Horas</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;font-size:10px;color:var(--muted)">Equipo principal</td></tr>
+        <tr style="background:#faf9f6"><td style="padding:7px 10px;border-bottom:.5px solid #e0ddd5"><span class="pill pill-lagos">Team Lagos</span></td><td style="padding:7px 10px;border-bottom:.5px solid #e0ddd5;text-align:center">4</td><td style="padding:7px 10px;border-bottom:.5px solid #e0ddd5">Fijo</td><td style="padding:7px 10px;border-bottom:.5px solid #e0ddd5;font-size:10px;color:var(--muted)">Volumen marginal</td></tr>
+        <!-- Emusa -->
+        <tr><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;font-weight:500" rowspan="2">Emusa Perú S.A.C.</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5"><span class="pill pill-paz">Team Paz</span></td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center;font-weight:600">12</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">Fijo</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;font-size:10px;color:var(--muted)">Equipo principal</td></tr>
+        <tr style="background:#faf9f6"><td style="padding:7px 10px;border-bottom:.5px solid #e0ddd5"><span class="pill pill-morales">Team Morales</span></td><td style="padding:7px 10px;border-bottom:.5px solid #e0ddd5;text-align:center">1</td><td style="padding:7px 10px;border-bottom:.5px solid #e0ddd5">Fijo</td><td style="padding:7px 10px;border-bottom:.5px solid #e0ddd5;font-size:10px;color:var(--muted)">Volumen marginal</td></tr>
+        <!-- Minsur -->
+        <tr><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;font-weight:500" rowspan="2">Minsur</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5"><span class="pill pill-lagos">Team Lagos</span></td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center;font-weight:600">8</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">Etapas/Hitos · Horas</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;font-size:10px;color:var(--muted)">Equipo principal</td></tr>
+        <tr style="background:#faf9f6"><td style="padding:7px 10px;border-bottom:.5px solid #e0ddd5"><span class="pill pill-paz">Team Paz</span></td><td style="padding:7px 10px;border-bottom:.5px solid #e0ddd5;text-align:center">1</td><td style="padding:7px 10px;border-bottom:.5px solid #e0ddd5">Fijo</td><td style="padding:7px 10px;border-bottom:.5px solid #e0ddd5;font-size:10px;color:var(--muted)">Volumen marginal</td></tr>
+        <!-- Hortifrut -->
+        <tr><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;font-weight:500" rowspan="2">Hortifrut Perú S.A.C.</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5"><span class="pill pill-lagos">Team Lagos</span></td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center;font-weight:600">27</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">Fijo · Etapas/Hitos</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;font-size:10px;color:var(--muted)">Equipo principal</td></tr>
+        <tr style="background:#faf9f6"><td style="padding:7px 10px;border-bottom:.5px solid #e0ddd5"><span class="pill pill-arias">Team Arias</span></td><td style="padding:7px 10px;border-bottom:.5px solid #e0ddd5;text-align:center">1</td><td style="padding:7px 10px;border-bottom:.5px solid #e0ddd5">Fijo</td><td style="padding:7px 10px;border-bottom:.5px solid #e0ddd5;font-size:10px;color:var(--muted)">Volumen marginal</td></tr>
+        <!-- San Jacinto -->
+        <tr style="background:#FFFBF0"><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;font-weight:500" rowspan="2">Agroindustrias San Jacinto <span style="font-size:9px;background:var(--gold);color:var(--navy);padding:1px 5px;border-radius:6px;font-weight:600;margin-left:4px">Revisar</span></td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5"><span class="pill pill-morales">Team Morales</span></td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center;font-weight:600">3</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">Etapas/Hitos</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;font-size:10px;color:#7A5A0D">Sin equipo dominante</td></tr>
+        <tr style="background:#FFFBF0"><td style="padding:7px 10px;border-bottom:.5px solid #e0ddd5"><span class="pill pill-lagos">Team Lagos</span></td><td style="padding:7px 10px;border-bottom:.5px solid #e0ddd5;text-align:center">2</td><td style="padding:7px 10px;border-bottom:.5px solid #e0ddd5">Etapas/Hitos</td><td style="padding:7px 10px;border-bottom:.5px solid #e0ddd5;font-size:10px;color:#7A5A0D">Sin equipo dominante</td></tr>
+      </tbody>
+    </table>
+    <div class="note" style="margin-top:10px">Fondo <span style="background:#FFFBF0;padding:1px 5px;border-radius:2px;color:#7A5A0D;font-weight:500">ámbar claro</span> = requiere revisión para definir un único equipo responsable.</div>
+  </div>
+
   <!-- PROCESOS NARANJA -->
   <div class="section" style="margin-bottom:1.25rem;border-left:3px solid #E07A28">
     <div class="section-label" style="color:#E07A28">Procesos ingresados durante la redistribución — pendientes de confirmar equipo</div>
