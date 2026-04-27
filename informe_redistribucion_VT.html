@@ -164,6 +164,7 @@ html,body{min-height:100%;background:var(--cream);font-family:'Segoe UI','Helvet
     <button class="tab-btn active" onclick="switchTab('plan')">Plan del fin de semana</button>
     <button class="tab-btn" onclick="switchTab('avance')">Avance al 25 Abr</button>
     <button class="tab-btn" onclick="switchTab('diligencias')">Diligencias desde 16 May</button>
+    <button class="tab-btn" onclick="switchTab('cierre')">Cierre de redistribución</button>
   </div>
   <div class="nav-date">Abril 2026</div>
 </nav>
@@ -178,7 +179,7 @@ html,body{min-height:100%;background:var(--cream);font-family:'Segoe UI','Helvet
     <h1 class="ph-h1">Plan de Redistribución<br>de Procesos y Equipos</h1>
     <div class="ph-sub">Fin de semana operativo · Sábado 25 y Domingo 26 de abril de 2026</div>
     <div class="badges">
-      <span class="badge">1,996 procesos</span>
+      <span class="badge">2,902 procesos redistribuidos</span>
       <span class="badge">6 equipos legales</span>
       <span class="badge">4 personas involucradas</span>
       <span class="badge">2 días de ejecución</span>
@@ -186,7 +187,7 @@ html,body{min-height:100%;background:var(--cream);font-family:'Segoe UI','Helvet
   </div>
 
   <div class="kpi-grid">
-    <div class="kpi"><div class="kpi-num">1,996</div><div class="kpi-lbl">Procesos a migrar</div></div>
+    <div class="kpi"><div class="kpi-num">2,902</div><div class="kpi-lbl">Procesos redistribuidos</div></div>
     <div class="kpi"><div class="kpi-num">6</div><div class="kpi-lbl">Equipos legales</div></div>
     <div class="kpi"><div class="kpi-num">2</div><div class="kpi-lbl">Días de trabajo</div></div>
     <div class="kpi"><div class="kpi-num">4</div><div class="kpi-lbl">Personas en equipo</div></div>
@@ -399,12 +400,12 @@ html,body{min-height:100%;background:var(--cream);font-family:'Segoe UI','Helvet
 
   <div class="kpi-grid">
     <div class="kpi">
-      <div class="kpi-num">1,996</div>
+      <div class="kpi-num">1,992</div>
       <div class="kpi-lbl">Supervisores actualizados</div>
       <div class="kpi-sub">6 equipos</div>
     </div>
     <div class="kpi">
-      <div class="kpi-num">1,872</div>
+      <div class="kpi-num">1,860</div>
       <div class="kpi-lbl">Responsables actualizados</div>
       <div class="kpi-sub">22 responsables distintos</div>
     </div>
@@ -422,7 +423,7 @@ html,body{min-height:100%;background:var(--cream);font-family:'Segoe UI','Helvet
 
   <!-- DISTRIBUCIÓN POR EQUIPO -->
   <div class="section">
-    <div class="section-label">Distribución por equipo — supervisores (1,996 procesos)</div>
+    <div class="section-label">Distribución por equipo — supervisores (2,902 redistribuidos)</div>
 
     <div class="bar-h">
       <div class="bar-h-label">Team Paz</div>
@@ -496,7 +497,7 @@ html,body{min-height:100%;background:var(--cream);font-family:'Segoe UI','Helvet
         <tr><td><span class="pill pill-lagos">Team Lagos</span></td><td>Cynthia Lagos</td><td style="text-align:right;font-weight:500">94</td><td style="text-align:right;color:var(--muted)">4.7%</td><td style="text-align:right">1</td></tr>
         <tr><td><span class="pill pill-morales">Team Morales</span></td><td>Carlos Morales</td><td style="text-align:right;font-weight:500">27</td><td style="text-align:right;color:var(--muted)">1.4%</td><td style="text-align:right">—</td></tr>
         <tr><td><span class="pill pill-estrella">Team Estrella</span></td><td>Solanch Estrella</td><td style="text-align:right;font-weight:500">3</td><td style="text-align:right;color:var(--muted)">0.2%</td><td style="text-align:right">—</td></tr>
-        <tr class="total-row"><td colspan="2">Total</td><td style="text-align:right">1,996</td><td style="text-align:right;color:var(--muted)">100%</td><td style="text-align:right">23</td></tr>
+        <tr class="total-row"><td colspan="2">Total</td><td style="text-align:right">2,902</td><td style="text-align:right;color:var(--muted)">100%</td><td style="text-align:right">23</td></tr>
       </tbody>
     </table>
   </div>
@@ -650,7 +651,7 @@ html,body{min-height:100%;background:var(--cream);font-family:'Segoe UI','Helvet
       </div>
 
     </div>
-    <div class="note" style="margin-top:10px">Datos cruzados del universo de 1,996 procesos redistribuidos con el Reporte Total de Procesos (Semana 16). 1,977 procesos con cliente identificado · 19 sin match. Los números en paréntesis indican cantidad de procesos por cliente en cada equipo.</div>
+    <div class="note" style="margin-top:10px">Datos del Reporte Final de Redistribución. Los números en paréntesis indican procesos por cliente en cada equipo.</div>
   </div>
 
   <div class="page-footer">Vinatea &amp; Toyama · CID · 25 Abr 2026 · En curso · Uso interno</div>
@@ -801,9 +802,9 @@ html,body{min-height:100%;background:var(--cream);font-family:'Segoe UI','Helvet
         <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted)"><span style="width:10px;height:10px;border-radius:50%;background:#E07A28;display:inline-block"></span>Naranja = Alessandra</div>
         <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted)"><span style="width:10px;height:10px;border-radius:50%;background:#28A0C8;display:inline-block"></span>Celeste = Brando</div>
       </div>
-      <div class="asig-card-row"><div class="asig-dot naranja"></div><div class="asig-aname">Alessandra Hernández</div><div class="asig-detail">May: 21 · Jun: 29</div><div class="asig-total">50</div></div>
-      <div class="asig-card-row"><div class="asig-dot celeste"></div><div class="asig-aname">Brando Castro</div><div class="asig-detail">May: 58 · Jun: 119</div><div class="asig-total">177</div></div>
-      <div class="note">227 diligencias de mayo–junio divididas por color en el Excel de Joselin. El resto (215) se ejecuta progresivamente.</div>
+      <div class="asig-card-row"><div class="asig-dot naranja"></div><div class="asig-aname">Alessandra Hernández</div><div class="asig-detail">May: 21 · Jun: 93</div><div class="asig-total">114</div></div>
+      <div class="asig-card-row"><div class="asig-dot celeste"></div><div class="asig-aname">Brando Castro</div><div class="asig-detail">May: 20 · Jun: 93</div><div class="asig-total">113</div></div>
+      <div class="note">227 diligencias de mayo–junio: Alessandra (114) y Brando (113). El resto (215) se ejecuta progresivamente.</div>
     </div>
     <div class="dili-card">
       <div class="dili-card-label">Tipo de audiencia</div>
@@ -892,12 +893,352 @@ html,body{min-height:100%;background:var(--cream);font-family:'Segoe UI','Helvet
 <script>
 function switchTab(id){
   document.querySelectorAll('.tab-btn').forEach((b,i)=>{
-    b.classList.toggle('active', (i===0&&id==='plan')||(i===1&&id==='avance')||(i===2&&id==='diligencias'));
+    b.classList.toggle('active',(i===0&&id==='plan')||(i===1&&id==='avance')||(i===2&&id==='diligencias')||(i===3&&id==='cierre'));
   });
   document.querySelectorAll('.panel').forEach(p=>{
-    p.classList.toggle('active', p.id==='panel-'+id);
+    p.classList.toggle('active',p.id==='panel-'+id);
   });
 }
 </script>
+
+<!-- ════════════════════════════════════════════
+     PANEL 4: CIERRE DE REDISTRIBUCIÓN
+════════════════════════════════════════════ -->
+<style>
+.cierre-kgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:.5px solid var(--border);border-radius:6px;overflow:hidden;margin-bottom:1.25rem}
+.cierre-kcard{background:var(--white);padding:14px 16px;text-align:center;position:relative}
+.cierre-kcard::after{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.cierre-kcard.navy::after{background:var(--navy)}
+.cierre-kcard.gold::after{background:var(--gold)}
+.cierre-kcard.green::after{background:#1A5930}
+.cierre-kcard.red::after{background:#A83232}
+.ck-num{font-size:24px;color:var(--navy);line-height:1}
+.ck-lbl{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-top:4px}
+.ck-sub{font-size:10px;color:var(--gold);margin-top:2px;font-weight:500}
+.cierre-grid2{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.25rem}
+.cierre-card{background:var(--white);border:.5px solid var(--border);border-radius:8px;padding:1.4rem}
+.cc-label{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:12px}
+.team-block{margin-bottom:14px;padding-bottom:14px;border-bottom:.5px solid var(--border)}
+.team-block:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.tb-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.tb-total{font-size:11px;font-weight:600;color:var(--navy)}
+.progress-wrap{background:#eee;border-radius:3px;height:8px;margin-bottom:5px;overflow:hidden;display:flex}
+.prog-updated{height:8px;background:var(--navy)}
+.prog-kept{height:8px;background:#D4C9B0}
+.prog-labels{display:flex;justify-content:space-between;font-size:9px;color:var(--muted)}
+.ct-row{display:flex;justify-content:space-between;padding:5px 0;border-bottom:.5px solid #f5f2ec;font-size:11px}
+.ct-row:last-child{border-bottom:none}
+.ct-name{color:var(--text);flex:1;padding-right:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ct-num{font-weight:500;color:var(--navy);flex-shrink:0}
+.pacto-row{display:flex;align-items:center;gap:8px;margin-bottom:7px}
+.pacto-row:last-child{margin-bottom:0}
+.pacto-lbl{font-size:11px;color:var(--text);width:100px;flex-shrink:0}
+.pacto-bar{flex:1;background:#eee;border-radius:2px;height:12px}
+.pacto-fill{height:12px;border-radius:2px}
+.pacto-num{font-size:10px;color:var(--muted);width:30px;text-align:right;flex-shrink:0}
+.inst-mini{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.inst-mini-card{text-align:center;padding:8px 4px;border:.5px solid var(--border);border-radius:5px;background:var(--cream,#F8F5EE)}
+.inst-mini-n{font-size:15px;color:var(--navy);line-height:1}
+.inst-mini-l{font-size:8px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin-top:2px}
+.alert-card{background:#FEF3F0;border:.5px solid #F5C6B8;border-radius:8px;padding:1.2rem 1.4rem;margin-bottom:1.25rem;display:flex;gap:14px;align-items:flex-start}
+.alert-icon{width:32px;height:32px;min-width:32px;border-radius:50%;background:#A83232;color:#fff;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.alert-title{font-size:13px;font-weight:500;color:#A83232;margin-bottom:4px}
+.alert-desc{font-size:11px;color:#7A3A2A;line-height:1.6}
+.alert-tbl{width:100%;border-collapse:collapse;font-size:11px;margin-top:8px}
+.alert-tbl th{font-size:9px;letter-spacing:.8px;text-transform:uppercase;color:#7A3A2A;padding:4px 8px;border-bottom:.5px solid #F5C6B8;text-align:left}
+.alert-tbl td{padding:6px 8px;border-bottom:.5px solid #FAE8E4;color:#5A2A1A}
+.alert-tbl tr:last-child td{border-bottom:none}
+.summary-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:.5px solid var(--border);border-radius:6px;overflow:hidden;margin-bottom:1.25rem}
+.ss-card{background:var(--white);padding:12px 16px;text-align:center}
+.ss-num{font-size:22px;color:var(--navy);line-height:1}
+.ss-lbl{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-top:4px}
+.ss-sub{font-size:10px;color:var(--gold);margin-top:2px}
+.full-bar-row{display:flex;align-items:center;gap:10px;margin-bottom:11px}
+.full-bar-row:last-child{margin-bottom:0}
+.fbr-lbl{font-size:11px;color:var(--text);width:110px;flex-shrink:0}
+.fbr-wrap{flex:1;border-radius:3px;height:20px;overflow:hidden;display:flex}
+.fbr-updated{height:20px;display:flex;align-items:center;padding-left:5px}
+.fbr-kept{height:20px}
+.fbr-val{font-size:9px;font-weight:600;color:#fff}
+.fbr-total{font-size:11px;font-weight:600;color:var(--navy);width:36px;text-align:right;flex-shrink:0}
+.fbr-pct{font-size:9px;color:var(--muted);width:28px;text-align:right;flex-shrink:0}
+</style>
+
+<div class="panel" id="panel-cierre">
+  <div class="page-header">
+    <div class="ph-tag">Vinatea &amp; Toyama — CID</div>
+    <h1 class="ph-h1">Cierre de Redistribución<br><span style="color:var(--gold-light)">Estado Final de la Cartera</span></h1>
+    <div class="ph-sub">Reporte Final · Abril 2026 · 6 equipos legales</div>
+    <div class="badges">
+      <span class="badge">6,630 procesos totales</span>
+      <span class="badge">2,902 redistribuidos</span>
+      <span class="badge">3,728 sin cambio</span>
+      <span class="badge">2 pendientes de decisión</span>
+    </div>
+  </div>
+
+  <!-- ALERTA HIGA -->
+  <div class="alert-card">
+    <div class="alert-icon">!</div>
+    <div style="flex:1">
+      <div class="alert-title">2 procesos pendientes de asignación de equipo</div>
+      <div class="alert-desc">Los siguientes procesos ingresaron durante la redistribución con el supervisor anterior (Alfonso Higa) y requieren decisión sobre a qué equipo serán asignados.</div>
+      <table class="alert-tbl">
+        <thead><tr><th>Nro</th><th>Cliente</th><th>Pacto</th><th>Estado Interno</th><th>Fecha Encargo</th></tr></thead>
+        <tbody>
+          <tr><td>27453</td><td>LATAM Airlines Perú S.A.</td><td>Horas</td><td>Primera Instancia</td><td>20/04/2026</td></tr>
+          <tr><td>27491</td><td>LATAM Airlines Perú S.A.</td><td>Horas</td><td>Primera Instancia</td><td>21/04/2026</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- KPIs CIERRE -->
+  <div class="cierre-kgrid">
+    <div class="cierre-kcard navy"><div class="ck-num">6,630</div><div class="ck-lbl">Procesos totales firma</div><div class="ck-sub">6 equipos</div></div>
+    <div class="cierre-kcard gold"><div class="ck-num">2,902</div><div class="ck-lbl">Redistribuidos</div><div class="ck-sub">Supervisores y responsables actualizados</div></div>
+    <div class="cierre-kcard green"><div class="ck-num">3,728</div><div class="ck-lbl">Se mantienen</div><div class="ck-sub">Sin cambio en asignación</div></div>
+    <div class="cierre-kcard red"><div class="ck-num">2</div><div class="ck-lbl">Pendientes decisión</div><div class="ck-sub">LATAM · Alfonso Higa</div></div>
+  </div>
+
+  <!-- CARTERA POR EQUIPO -->
+  <div class="section">
+    <div class="section-label">Cartera total por equipo — redistribuidos vs. sin cambio</div>
+    <div class="full-bar-row">
+      <div class="fbr-lbl"><span class="pill pill-estrella">Team Estrella</span></div>
+      <div class="fbr-wrap">
+        <div class="fbr-updated" style="width:18.4%;background:#5A5A10"><span class="fbr-val">337</span></div>
+        <div class="fbr-kept" style="width:81.6%;background:#D4C9B0"></div>
+      </div>
+      <div class="fbr-total">1,834</div>
+      <div class="fbr-pct">27.7%</div>
+    </div>
+    <div class="full-bar-row">
+      <div class="fbr-lbl"><span class="pill pill-arias">Team Arias</span></div>
+      <div class="fbr-wrap">
+        <div class="fbr-updated" style="width:19.6%;background:#7A3A0A"><span class="fbr-val">279</span></div>
+        <div class="fbr-kept" style="width:80.4%;background:#D4C9B0"></div>
+      </div>
+      <div class="fbr-total">1,425</div>
+      <div class="fbr-pct">21.5%</div>
+    </div>
+    <div class="full-bar-row">
+      <div class="fbr-lbl"><span class="pill pill-paz">Team Paz</span></div>
+      <div class="fbr-wrap">
+        <div class="fbr-updated" style="width:98.1%;background:#0D1F3C"><span class="fbr-val">1,187</span></div>
+        <div class="fbr-kept" style="width:1.9%;background:#D4C9B0"></div>
+      </div>
+      <div class="fbr-total">1,210</div>
+      <div class="fbr-pct">18.3%</div>
+    </div>
+    <div class="full-bar-row">
+      <div class="fbr-lbl"><span class="pill pill-lagos">Team Lagos</span></div>
+      <div class="fbr-wrap">
+        <div class="fbr-updated" style="width:49%;background:#3D0A5A"><span class="fbr-val">486</span></div>
+        <div class="fbr-kept" style="width:51%;background:#D4C9B0"></div>
+      </div>
+      <div class="fbr-total">991</div>
+      <div class="fbr-pct">14.9%</div>
+    </div>
+    <div class="full-bar-row">
+      <div class="fbr-lbl"><span class="pill pill-morales">Team Morales</span></div>
+      <div class="fbr-wrap">
+        <div class="fbr-updated" style="width:4.5%;background:#8B2000"><span class="fbr-val" style="font-size:8px">26</span></div>
+        <div class="fbr-kept" style="width:95.5%;background:#D4C9B0"></div>
+      </div>
+      <div class="fbr-total">578</div>
+      <div class="fbr-pct">8.7%</div>
+    </div>
+    <div class="full-bar-row">
+      <div class="fbr-lbl"><span class="pill pill-jacinto">Team Jacinto</span></div>
+      <div class="fbr-wrap">
+        <div class="fbr-updated" style="width:99.5%;background:#1A5930"><span class="fbr-val">587</span></div>
+        <div class="fbr-kept" style="width:0.5%;background:#D4C9B0"></div>
+      </div>
+      <div class="fbr-total">590</div>
+      <div class="fbr-pct">8.9%</div>
+    </div>
+    <div class="note" style="margin-top:10px">
+      <span style="display:inline-block;width:12px;height:8px;background:var(--navy);border-radius:2px;margin-right:4px;vertical-align:middle"></span>Redistribuido (actualizado) &nbsp;
+      <span style="display:inline-block;width:12px;height:8px;background:#D4C9B0;border-radius:2px;margin-right:4px;vertical-align:middle"></span>Se mantiene sin cambio
+    </div>
+  </div>
+
+  <!-- CLIENTES + FACTURACIÓN -->
+  <div class="cierre-grid2">
+
+    <!-- CLIENTES POR EQUIPO -->
+    <div class="cierre-card">
+      <div class="cc-label">Principales clientes por equipo (cartera total)</div>
+
+      <div class="team-block">
+        <div class="tb-head"><span class="pill pill-paz" style="font-size:10px">Team Paz</span><span class="tb-total">13 clientes · 1,210 proc.</span></div>
+        <div class="ct-row"><div class="ct-name">Banco de Crédito del Perú</div><div class="ct-num">635</div></div>
+        <div class="ct-row"><div class="ct-name">Minera Aurífera Retamas</div><div class="ct-num">310</div></div>
+        <div class="ct-row"><div class="ct-name">Cía. Minera Antapaccay</div><div class="ct-num">171</div></div>
+        <div class="ct-row"><div class="ct-name">Cía. Minera Raura</div><div class="ct-num">30</div></div>
+        <div class="ct-row"><div class="ct-name">Agroindustrial Laredo</div><div class="ct-num">17</div></div>
+      </div>
+
+      <div class="team-block">
+        <div class="tb-head"><span class="pill pill-estrella" style="font-size:10px">Team Estrella</span><span class="tb-total">34 clientes · 1,834 proc.</span></div>
+        <div class="ct-row"><div class="ct-name">Corporación Lindley</div><div class="ct-num">695</div></div>
+        <div class="ct-row"><div class="ct-name">Arca Continental Lindley</div><div class="ct-num">373</div></div>
+        <div class="ct-row"><div class="ct-name">Telefónica del Perú</div><div class="ct-num">158</div></div>
+        <div class="ct-row"><div class="ct-name">Nexa Resources Cajamarquilla</div><div class="ct-num">145</div></div>
+        <div class="ct-row"><div class="ct-name">Distribuidora Norte Pacasmayo</div><div class="ct-num">95</div></div>
+      </div>
+
+      <div class="team-block">
+        <div class="tb-head"><span class="pill pill-arias" style="font-size:10px">Team Arias</span><span class="tb-total">12 clientes · 1,425 proc.</span></div>
+        <div class="ct-row"><div class="ct-name">Tiendas por Dpto. Ripley</div><div class="ct-num">465</div></div>
+        <div class="ct-row"><div class="ct-name">Cencosud Retail Perú</div><div class="ct-num">255</div></div>
+        <div class="ct-row"><div class="ct-name">G4S Perú</div><div class="ct-num">255</div></div>
+        <div class="ct-row"><div class="ct-name">Mapfre Perú Vida</div><div class="ct-num">209</div></div>
+        <div class="ct-row"><div class="ct-name">Banco Ripley Perú</div><div class="ct-num">97</div></div>
+      </div>
+
+      <div class="team-block">
+        <div class="tb-head"><span class="pill pill-lagos" style="font-size:10px">Team Lagos</span><span class="tb-total">119 clientes · 991 proc.</span></div>
+        <div class="ct-row"><div class="ct-name">Soc. Minera Cerro Verde</div><div class="ct-num">535</div></div>
+        <div class="ct-row"><div class="ct-name">Smurfit Kappa Perú</div><div class="ct-num">34</div></div>
+        <div class="ct-row"><div class="ct-name">Solpack S.A.C.</div><div class="ct-num">31</div></div>
+        <div class="ct-row"><div class="ct-name">Hortifrut Perú</div><div class="ct-num">27</div></div>
+        <div class="ct-row"><div class="ct-name">Virú S.A.</div><div class="ct-num">23</div></div>
+      </div>
+
+      <div class="team-block">
+        <div class="tb-head"><span class="pill pill-jacinto" style="font-size:10px">Team Jacinto</span><span class="tb-total">110 clientes · 590 proc.</span></div>
+        <div class="ct-row"><div class="ct-name">Quimpac S.A.</div><div class="ct-num">79</div></div>
+        <div class="ct-row"><div class="ct-name">San Fernando S.A.</div><div class="ct-num">62</div></div>
+        <div class="ct-row"><div class="ct-name">Engie Energía Perú</div><div class="ct-num">49</div></div>
+        <div class="ct-row"><div class="ct-name">LATAM Airlines Perú</div><div class="ct-num">30</div></div>
+        <div class="ct-row"><div class="ct-name">Mibanco</div><div class="ct-num">20</div></div>
+      </div>
+
+      <div class="team-block">
+        <div class="tb-head"><span class="pill pill-morales" style="font-size:10px">Team Morales</span><span class="tb-total">92 clientes · 578 proc.</span></div>
+        <div class="ct-row"><div class="ct-name">Pan American Silver Huarón</div><div class="ct-num">111</div></div>
+        <div class="ct-row"><div class="ct-name">Snacks América Latina</div><div class="ct-num">57</div></div>
+        <div class="ct-row"><div class="ct-name">Transportadora de Gas del Perú</div><div class="ct-num">41</div></div>
+        <div class="ct-row"><div class="ct-name">Clínica Internacional</div><div class="ct-num">30</div></div>
+        <div class="ct-row"><div class="ct-name">UTP S.A.C.</div><div class="ct-num">25</div></div>
+      </div>
+    </div>
+
+    <!-- FACTURACIÓN + INSTANCIAS -->
+    <div style="display:flex;flex-direction:column;gap:1.25rem">
+
+      <div class="cierre-card">
+        <div class="cc-label">Tipo de facturación por equipo (Pacto)</div>
+        <div style="margin-bottom:12px">
+          <div style="font-size:10px;font-weight:500;color:var(--navy);margin-bottom:5px"><span class="pill pill-paz" style="font-size:10px">Team Paz</span></div>
+          <div class="pacto-row"><div class="pacto-lbl">Fijo</div><div class="pacto-bar"><div class="pacto-fill" style="width:100%;background:#0D1F3C"></div></div><div class="pacto-num">1,111</div></div>
+          <div class="pacto-row"><div class="pacto-lbl">Horas</div><div class="pacto-bar"><div class="pacto-fill" style="width:7.5%;background:#0D1F3C"></div></div><div class="pacto-num">83</div></div>
+          <div class="pacto-row"><div class="pacto-lbl">Etapas/Hitos</div><div class="pacto-bar"><div class="pacto-fill" style="width:1.4%;background:#0D1F3C"></div></div><div class="pacto-num">16</div></div>
+        </div>
+        <div style="margin-bottom:12px">
+          <div style="font-size:10px;font-weight:500;color:var(--navy);margin-bottom:5px"><span class="pill pill-estrella" style="font-size:10px">Team Estrella</span></div>
+          <div class="pacto-row"><div class="pacto-lbl">Fijo</div><div class="pacto-bar"><div class="pacto-fill" style="width:100%;background:#5A5A10"></div></div><div class="pacto-num">1,653</div></div>
+          <div class="pacto-row"><div class="pacto-lbl">Etapas/Hitos</div><div class="pacto-bar"><div class="pacto-fill" style="width:10%;background:#5A5A10"></div></div><div class="pacto-num">166</div></div>
+          <div class="pacto-row"><div class="pacto-lbl">Horas</div><div class="pacto-bar"><div class="pacto-fill" style="width:0.9%;background:#5A5A10"></div></div><div class="pacto-num">15</div></div>
+        </div>
+        <div style="margin-bottom:12px">
+          <div style="font-size:10px;font-weight:500;color:var(--navy);margin-bottom:5px"><span class="pill pill-arias" style="font-size:10px">Team Arias</span></div>
+          <div class="pacto-row"><div class="pacto-lbl">Fijo</div><div class="pacto-bar"><div class="pacto-fill" style="width:100%;background:#7A3A0A"></div></div><div class="pacto-num">1,403</div></div>
+          <div class="pacto-row"><div class="pacto-lbl">Etapas/Hitos</div><div class="pacto-bar"><div class="pacto-fill" style="width:0.8%;background:#7A3A0A"></div></div><div class="pacto-num">12</div></div>
+        </div>
+        <div style="margin-bottom:12px">
+          <div style="font-size:10px;font-weight:500;color:var(--navy);margin-bottom:5px"><span class="pill pill-lagos" style="font-size:10px">Team Lagos</span></div>
+          <div class="pacto-row"><div class="pacto-lbl">Horas</div><div class="pacto-bar"><div class="pacto-fill" style="width:100%;background:#3D0A5A"></div></div><div class="pacto-num">692</div></div>
+          <div class="pacto-row"><div class="pacto-lbl">Etapas/Hitos</div><div class="pacto-bar"><div class="pacto-fill" style="width:29.8%;background:#3D0A5A"></div></div><div class="pacto-num">206</div></div>
+          <div class="pacto-row"><div class="pacto-lbl">Retainer</div><div class="pacto-bar"><div class="pacto-fill" style="width:8.1%;background:#3D0A5A"></div></div><div class="pacto-num">56</div></div>
+          <div class="pacto-row"><div class="pacto-lbl">Fijo</div><div class="pacto-bar"><div class="pacto-fill" style="width:4.8%;background:#3D0A5A"></div></div><div class="pacto-num">33</div></div>
+        </div>
+        <div style="margin-bottom:12px">
+          <div style="font-size:10px;font-weight:500;color:var(--navy);margin-bottom:5px"><span class="pill pill-jacinto" style="font-size:10px">Team Jacinto</span></div>
+          <div class="pacto-row"><div class="pacto-lbl">Etapas/Hitos</div><div class="pacto-bar"><div class="pacto-fill" style="width:100%;background:#1A5930"></div></div><div class="pacto-num">331</div></div>
+          <div class="pacto-row"><div class="pacto-lbl">Horas</div><div class="pacto-bar"><div class="pacto-fill" style="width:54.1%;background:#1A5930"></div></div><div class="pacto-num">179</div></div>
+          <div class="pacto-row"><div class="pacto-lbl">Fijo</div><div class="pacto-bar"><div class="pacto-fill" style="width:22.1%;background:#1A5930"></div></div><div class="pacto-num">73</div></div>
+          <div class="pacto-row"><div class="pacto-lbl">Retainer</div><div class="pacto-bar"><div class="pacto-fill" style="width:1.8%;background:#1A5930"></div></div><div class="pacto-num">6</div></div>
+        </div>
+        <div>
+          <div style="font-size:10px;font-weight:500;color:var(--navy);margin-bottom:5px"><span class="pill pill-morales" style="font-size:10px">Team Morales</span></div>
+          <div class="pacto-row"><div class="pacto-lbl">Etapas/Hitos</div><div class="pacto-bar"><div class="pacto-fill" style="width:100%;background:#8B2000"></div></div><div class="pacto-num">358</div></div>
+          <div class="pacto-row"><div class="pacto-lbl">Horas</div><div class="pacto-bar"><div class="pacto-fill" style="width:38.5%;background:#8B2000"></div></div><div class="pacto-num">138</div></div>
+          <div class="pacto-row"><div class="pacto-lbl">Retainer</div><div class="pacto-bar"><div class="pacto-fill" style="width:22.3%;background:#8B2000"></div></div><div class="pacto-num">80</div></div>
+        </div>
+      </div>
+
+      <div class="cierre-card">
+        <div class="cc-label">Estado interno por equipo</div>
+        <table style="width:100%;border-collapse:collapse;font-size:11px">
+          <thead><tr>
+            <th style="font-size:9px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:5px 6px;text-align:left;border-bottom:.5px solid var(--border)">Equipo</th>
+            <th style="font-size:9px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:5px 6px;text-align:center;border-bottom:.5px solid var(--border)">1ª Inst.</th>
+            <th style="font-size:9px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:5px 6px;text-align:center;border-bottom:.5px solid var(--border)">Ejec.</th>
+            <th style="font-size:9px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:5px 6px;text-align:center;border-bottom:.5px solid var(--border)">2ª Inst.</th>
+            <th style="font-size:9px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:5px 6px;text-align:center;border-bottom:.5px solid var(--border)">3ª Inst.</th>
+            <th style="font-size:9px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);padding:5px 6px;text-align:right;border-bottom:.5px solid var(--border)">Total</th>
+          </tr></thead>
+          <tbody>
+            <tr><td style="padding:7px 6px;border-bottom:.5px solid #f0ede5"><span class="pill pill-estrella" style="font-size:10px">T. Estrella</span></td><td style="text-align:center;padding:7px 6px;border-bottom:.5px solid #f0ede5">763</td><td style="text-align:center;padding:7px 6px;border-bottom:.5px solid #f0ede5">745</td><td style="text-align:center;padding:7px 6px;border-bottom:.5px solid #f0ede5">260</td><td style="text-align:center;padding:7px 6px;border-bottom:.5px solid #f0ede5">65</td><td style="text-align:right;padding:7px 6px;border-bottom:.5px solid #f0ede5;font-weight:600">1,834</td></tr>
+            <tr><td style="padding:7px 6px;border-bottom:.5px solid #f0ede5"><span class="pill pill-arias" style="font-size:10px">T. Arias</span></td><td style="text-align:center;padding:7px 6px;border-bottom:.5px solid #f0ede5">533</td><td style="text-align:center;padding:7px 6px;border-bottom:.5px solid #f0ede5">573</td><td style="text-align:center;padding:7px 6px;border-bottom:.5px solid #f0ede5">233</td><td style="text-align:center;padding:7px 6px;border-bottom:.5px solid #f0ede5">85</td><td style="text-align:right;padding:7px 6px;border-bottom:.5px solid #f0ede5;font-weight:600">1,425</td></tr>
+            <tr><td style="padding:7px 6px;border-bottom:.5px solid #f0ede5"><span class="pill pill-paz" style="font-size:10px">T. Paz</span></td><td style="text-align:center;padding:7px 6px;border-bottom:.5px solid #f0ede5">459</td><td style="text-align:center;padding:7px 6px;border-bottom:.5px solid #f0ede5">408</td><td style="text-align:center;padding:7px 6px;border-bottom:.5px solid #f0ede5">232</td><td style="text-align:center;padding:7px 6px;border-bottom:.5px solid #f0ede5">111</td><td style="text-align:right;padding:7px 6px;border-bottom:.5px solid #f0ede5;font-weight:600">1,210</td></tr>
+            <tr><td style="padding:7px 6px;border-bottom:.5px solid #f0ede5"><span class="pill pill-lagos" style="font-size:10px">T. Lagos</span></td><td style="text-align:center;padding:7px 6px;border-bottom:.5px solid #f0ede5">323</td><td style="text-align:center;padding:7px 6px;border-bottom:.5px solid #f0ede5">195</td><td style="text-align:center;padding:7px 6px;border-bottom:.5px solid #f0ede5">289</td><td style="text-align:center;padding:7px 6px;border-bottom:.5px solid #f0ede5">184</td><td style="text-align:right;padding:7px 6px;border-bottom:.5px solid #f0ede5;font-weight:600">991</td></tr>
+            <tr><td style="padding:7px 6px;border-bottom:.5px solid #f0ede5"><span class="pill pill-morales" style="font-size:10px">T. Morales</span></td><td style="text-align:center;padding:7px 6px;border-bottom:.5px solid #f0ede5">258</td><td style="text-align:center;padding:7px 6px;border-bottom:.5px solid #f0ede5">155</td><td style="text-align:center;padding:7px 6px;border-bottom:.5px solid #f0ede5">122</td><td style="text-align:center;padding:7px 6px;border-bottom:.5px solid #f0ede5">43</td><td style="text-align:right;padding:7px 6px;border-bottom:.5px solid #f0ede5;font-weight:600">578</td></tr>
+            <tr><td style="padding:7px 6px;border-bottom:none"><span class="pill pill-jacinto" style="font-size:10px">T. Jacinto</span></td><td style="text-align:center;padding:7px 6px;border-bottom:none">248</td><td style="text-align:center;padding:7px 6px;border-bottom:none">171</td><td style="text-align:center;padding:7px 6px;border-bottom:none">111</td><td style="text-align:center;padding:7px 6px;border-bottom:none">60</td><td style="text-align:right;padding:7px 6px;border-bottom:none;font-weight:600">590</td></tr>
+            <tr style="background:var(--cream)"><td style="padding:7px 6px;font-weight:500;font-size:10px;text-transform:uppercase;letter-spacing:.5px">Total</td><td style="text-align:center;padding:7px 6px;font-weight:600">2,584</td><td style="text-align:center;padding:7px 6px;font-weight:600">2,247</td><td style="text-align:center;padding:7px 6px;font-weight:600">1,247</td><td style="text-align:center;padding:7px 6px;font-weight:600">548</td><td style="text-align:right;padding:7px 6px;font-weight:600">6,628</td></tr>
+          </tbody>
+        </table>
+        <div class="note" style="margin-top:8px">Los 2 procesos Alfonso Higa (pendientes) no están incluidos en el total.</div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- PROCESOS NARANJA -->
+  <div class="section" style="margin-bottom:1.25rem;border-left:3px solid #E07A28">
+    <div class="section-label" style="color:#E07A28">Procesos ingresados durante la redistribución — pendientes de confirmar equipo</div>
+    <div style="font-size:12px;color:var(--muted);margin-bottom:12px;line-height:1.6">Los siguientes <strong style="color:var(--text)">41 procesos</strong> fueron encargados el 20 y 21 de abril de 2026, durante el fin de semana de redistribución. Se solicita a los supervisores confirmar a qué equipo pertenece cada uno para proceder con la actualización en MB. Los marcados en rojo requieren reasignación urgente.</div>
+    <div style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:11px">
+        <thead><tr style="background:var(--navy)">
+          <th style="color:var(--gold-light);padding:7px 10px;text-align:left;font-size:9px;letter-spacing:1px;text-transform:uppercase">Nro</th>
+          <th style="color:var(--gold-light);padding:7px 10px;text-align:left;font-size:9px;letter-spacing:1px;text-transform:uppercase">Cliente</th>
+          <th style="color:var(--gold-light);padding:7px 10px;text-align:left;font-size:9px;letter-spacing:1px;text-transform:uppercase">Supervisor actual</th>
+          <th style="color:var(--gold-light);padding:7px 10px;text-align:center;font-size:9px;letter-spacing:1px;text-transform:uppercase">Pacto</th>
+          <th style="color:var(--gold-light);padding:7px 10px;text-align:center;font-size:9px;letter-spacing:1px;text-transform:uppercase">Estado</th>
+          <th style="color:var(--gold-light);padding:7px 10px;text-align:center;font-size:9px;letter-spacing:1px;text-transform:uppercase">F. Encargo</th>
+          <th style="color:var(--gold-light);padding:7px 10px;text-align:left;font-size:9px;letter-spacing:1px;text-transform:uppercase">Equipo a confirmar</th>
+        </tr></thead>
+        <tbody>
+          <tr style="background:#FEF3F0"><td style="padding:7px 10px;border-bottom:.5px solid #FAE8E4;font-weight:600">27453</td><td style="padding:7px 10px;border-bottom:.5px solid #FAE8E4">LATAM Airlines Perú</td><td style="padding:7px 10px;border-bottom:.5px solid #FAE8E4"><span style="background:#F5EDED;border:.5px solid #C8A0A0;color:#A83232;font-size:10px;padding:1px 6px;border-radius:3px;font-weight:500">⚠ Alfonso Higa</span></td><td style="padding:7px 10px;border-bottom:.5px solid #FAE8E4;text-align:center">Horas</td><td style="padding:7px 10px;border-bottom:.5px solid #FAE8E4;text-align:center">1ª Inst.</td><td style="padding:7px 10px;border-bottom:.5px solid #FAE8E4;text-align:center">20/04</td><td style="padding:7px 10px;border-bottom:.5px solid #FAE8E4;color:#aaa;font-style:italic">Por definir</td></tr>
+          <tr style="background:#FEF3F0"><td style="padding:7px 10px;border-bottom:.5px solid #FAE8E4;font-weight:600">27491</td><td style="padding:7px 10px;border-bottom:.5px solid #FAE8E4">LATAM Airlines Perú</td><td style="padding:7px 10px;border-bottom:.5px solid #FAE8E4"><span style="background:#F5EDED;border:.5px solid #C8A0A0;color:#A83232;font-size:10px;padding:1px 6px;border-radius:3px;font-weight:500">⚠ Alfonso Higa</span></td><td style="padding:7px 10px;border-bottom:.5px solid #FAE8E4;text-align:center">Horas</td><td style="padding:7px 10px;border-bottom:.5px solid #FAE8E4;text-align:center">1ª Inst.</td><td style="padding:7px 10px;border-bottom:.5px solid #FAE8E4;text-align:center">21/04</td><td style="padding:7px 10px;border-bottom:.5px solid #FAE8E4;color:#aaa;font-style:italic">Por definir</td></tr>
+          <tr><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">27444</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">Corporación Lindley S.A.</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5"><span class="pill pill-estrella">Team Estrella</span></td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">Fijo</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">1ª Inst.</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">20/04</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;color:#aaa;font-style:italic">Confirmar</td></tr>
+          <tr><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">27446</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">Corporación Lindley S.A.</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5"><span class="pill pill-estrella">Team Estrella</span></td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">Fijo</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">1ª Inst.</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">20/04</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;color:#aaa;font-style:italic">Confirmar</td></tr>
+          <tr><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">27447</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">Corporación Lindley S.A.</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5"><span class="pill pill-estrella">Team Estrella</span></td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">Fijo</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">1ª Inst.</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">20/04</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;color:#aaa;font-style:italic">Confirmar</td></tr>
+          <tr><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">27450</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">Corporación Lindley S.A.</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5"><span class="pill pill-estrella">Team Estrella</span></td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">Fijo</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">1ª Inst.</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">20/04</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;color:#aaa;font-style:italic">Confirmar</td></tr>
+          <tr><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">27460</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">Minera Aurífera Retamas</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5"><span class="pill pill-lagos">Team Lagos</span></td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">Fijo</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">1ª Inst.</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">20/04</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;color:#aaa;font-style:italic">Confirmar</td></tr>
+          <tr><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">27471</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">Hipermercados Tottus S.A.</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5"><span class="pill pill-morales">Team Morales</span></td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">Pendiente</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">1ª Inst.</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">20/04</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;color:#aaa;font-style:italic">Confirmar</td></tr>
+          <tr><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">27489</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">Emusa Perú S.A.C.</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5"><span class="pill pill-morales">Team Morales</span></td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">Fijo</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">1ª Inst.</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">20/04</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;color:#aaa;font-style:italic">Confirmar</td></tr>
+          <tr><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">27457</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">Soc. Minera Cerro Verde</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5"><span class="pill pill-lagos">Team Lagos</span></td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">Horas</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">2ª Inst.</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">21/04</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;color:#aaa;font-style:italic">Confirmar</td></tr>
+          <tr><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">27462</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">Grucoin S.A.C.</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5"><span class="pill pill-lagos">Team Lagos</span></td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">Horas</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">1ª Inst.</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">21/04</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;color:#aaa;font-style:italic">Confirmar</td></tr>
+          <tr><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">27464</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">Banco BBVA Perú</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5"><span class="pill pill-estrella">Team Estrella</span></td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">Fijo</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">1ª Inst.</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">21/04</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;color:#aaa;font-style:italic">Confirmar</td></tr>
+          <tr><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">27466</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">Banco BBVA Perú</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5"><span class="pill pill-estrella">Team Estrella</span></td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">Fijo</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">1ª Inst.</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">21/04</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;color:#aaa;font-style:italic">Confirmar</td></tr>
+          <tr><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">27467</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">Banco BBVA Perú</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5"><span class="pill pill-estrella">Team Estrella</span></td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">Fijo</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">1ª Inst.</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">21/04</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;color:#aaa;font-style:italic">Confirmar</td></tr>
+          <tr><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">27468</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">Banco BBVA Perú</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5"><span class="pill pill-estrella">Team Estrella</span></td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">Fijo</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">1ª Inst.</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">21/04</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;color:#aaa;font-style:italic">Confirmar</td></tr>
+          <tr><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">27469</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">Banco BBVA Perú</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5"><span class="pill pill-estrella">Team Estrella</span></td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">Fijo</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">1ª Inst.</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">21/04</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;color:#aaa;font-style:italic">Confirmar</td></tr>
+          <tr><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">27481</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">AC Logística del Perú</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5"><span class="pill pill-estrella">Team Estrella</span></td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">Fijo</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">1ª Inst.</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">21/04</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;color:#aaa;font-style:italic">Confirmar</td></tr>
+          <tr><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">27496–27519</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5">Nexa Resources Cajamarquilla <span style="color:var(--muted)">(24 procesos)</span></td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5"><span class="pill pill-estrella">Team Estrella</span></td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">Fijo</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">1ª Inst.</td><td style="padding:7px 10px;border-bottom:.5px solid #f0ede5;text-align:center">21/04</td><td style="padding:7px 10px;border-bottom:none;color:#aaa;font-style:italic">Confirmar</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note" style="margin-top:10px">Filas en <span style="background:#FEF3F0;padding:1px 5px;border-radius:2px;color:#A83232;font-weight:500">rojo</span> = reasignación urgente (Alfonso Higa). Las demás requieren confirmación del equipo actual por parte del supervisor.</div>
+  </div>
+
+  <div class="page-footer">Vinatea &amp; Toyama · CID · Abril 2026 · Cierre · Uso interno</div>
+</div>
 </body>
 </html>
